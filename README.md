@@ -1,19 +1,35 @@
-A library for Dart developers.
+A library for Flutter developers to handle forms. It contains built-in validators and form field objects.
+Doesn't use global key in order to save/reset/submit form. Form field objects are updated with input from the user.
+These objects can be used by built-in TextFormField or TextFiel of Flutter.
 
 ## Usage
 
 A simple usage example:
 
 ```dart
-import 'package:form_handling/form_handling.dart';
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({
+    Key? key,
+    ...
+    this.errorMessage,
+    required this.fieldObject,
+  }) : super(key: key);
+  ...
+  final StringFieldObject fieldObject;
 
-main() {
-  var awesome = new Awesome();
-}
+  /// Do not provide [errorMessage] unless you wish to override
+  /// the message comes from validator of [fieldObject]
+  final String? errorMessage;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      decoration: InputDecoration(
+        ...
+        errorText: errorMessage,
+      ),
+      validator: errorMessage == null ? fieldObject.validator : null,
+    );
+  }
 ```
-
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+See the full example app.
