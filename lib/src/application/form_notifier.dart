@@ -36,46 +36,47 @@ class CustomFormState<V extends FormFieldsMixin, F> with _$CustomFormState<V, F>
   }) = _Success<V, F>;
 }
 
-abstract class FormNotifier<V extends FormFieldsMixin, F> extends StateNotifier<CustomFormState<V, F>> {
+abstract class FormNotifier<V extends FormFieldsMixin, F> extends StateNotifier<CustomFormState<V, F>> with FormMixin {
   FormNotifier(this.fieldsGenerator)
       : super(
           CustomFormState<V, F>.initial(
             fields: fieldsGenerator(),
           ),
-        );
-      
+        ) {
+          _setOwnerOfFields();
+        }
+
   final formKey = GlobalKey<FormState>();
-  
+
   final V Function() fieldsGenerator;
 
   bool validateFormAndSave() {
-    final iterator = state.fields.createIterator();
-    while (iterator.moveNext()) {
-      iterator.current.validate();
-    }
+    fields.fieldsList.forEach((e) => e.validate());
     return checkValidation();
   }
 
-  bool checkValidation() => state.fields.fieldsList.every((e) => e.isValid);
-
-  void validateFormAndUpdateState() {
-    Future.microtask(() {
-    // Doing this inside microtask so it won't check the validation before actual field gets updated
-      state = CustomFormState.formIsEdited(
-        fields: state.fields,
-        isFormSent: state.isFormSent,
-        isFormValid: checkValidation(),
-      );
-    });
-  }
+  bool checkValidation() => fields.fieldsList.every((e) => e.isValid);
 
   V get fields => state.fields;
-  
+
   void resetForm() {
     state = CustomFormState.initial(
       fields: fieldsGenerator(),
     );
     formKey.currentState?.reset();
+  }
+
+  void _setOwnerOfFields() {
+    fields.fieldsList.forEach((e) => e.owner = this);
+  }
+
+  @override
+  void updateState() {
+    state = CustomFormState.formIsEdited(
+      fields: state.fields,
+      isFormSent: state.isFormSent,
+      isFormValid: checkValidation(),
+    );
   }
 }
 
@@ -85,4 +86,8 @@ mixin FormFieldsMixin<V> {
   Iterator<FormFieldObject> createIterator() {
     return fieldsList.iterator;
   }
+}
+
+mixin FormMixin {
+  void updateState();
 }

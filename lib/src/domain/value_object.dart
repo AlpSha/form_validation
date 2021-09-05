@@ -1,5 +1,6 @@
 import 'package:form_handling/src/application/custom_validator.dart';
 import 'package:form_handling/src/application/date_validator.dart';
+import 'package:form_handling/src/application/form_notifier.dart';
 import 'package:form_handling/src/application/number_validator.dart';
 import 'package:form_handling/src/application/text_validator.dart';
 import 'package:form_handling/src/domain/input_failure.dart';
@@ -97,6 +98,7 @@ class FormFieldObject<V, F> {
     _valueObject = valueObject;
   }
 
+  FormMixin? owner;
   final CustomValidator<V, F> _validatorObject;
   final V initialValue;
   late ValueObject<V, F> _valueObject;
@@ -118,6 +120,11 @@ class FormFieldObject<V, F> {
         failure: _,
       ),
     );
+    notifyOwner();
+  }
+  
+  void notifyOwner() {
+    owner?.updateState();
   }
 
   // If object is in initial state, this method moves it onto other states. So it shows failures or success value
