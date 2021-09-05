@@ -1,4 +1,4 @@
-A library for Flutter developers to handle forms. It contains built-in validators and form field objects.
+A library for Flutter developers to handle forms. Based on Riverpod. Contains built-in validators and form field objects.
 Doesn't use global key in order to save/reset/submit form. Form field objects are updated with input from the user.
 These objects can be used by built-in TextFormField or TextFiel of Flutter.
 
