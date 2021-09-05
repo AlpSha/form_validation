@@ -42,17 +42,6 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
     return ValidationResult.success(value ?? '');
   }
 
-  factory TextValidator.studentPassword() {
-    return TextValidator(
-      onFailure: (_) => _.maybeMap(
-        empty: (_) => 'Password is required',
-        invalid: (_) => 'Can contain only numbers',
-        tooShort: (_) => 'Password is too short',
-        orElse: () {},
-      ),
-    );
-  }
-
   factory TextValidator.password() {
     return TextValidator(
       onFailure: (_) => _.maybeMap(
@@ -113,22 +102,6 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
       maxLength: maxUsernameLength,
       minLength: minUsernameLength,
       regex: usernameRegex,
-    );
-  }
-
-  factory TextValidator.grade() {
-    return TextValidator.name(
-      nameDescription: 'Grade',
-      minLength: 2,
-      regex: gradeRegex,
-    );
-  }
-
-  factory TextValidator.section() {
-    return TextValidator.name(
-      nameDescription: 'Section',
-      minLength: 2,
-      regex: gradeRegex,
     );
   }
 }

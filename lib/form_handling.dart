@@ -3,8 +3,6 @@
 /// More dartdocs go here.
 library form_handling;
 
-export 'src/form_handling_base.dart';
-
 export 'src/domain/value_object.dart';
 export 'src/domain/input_failure.dart';
 export 'src/application/form_field_state.dart';

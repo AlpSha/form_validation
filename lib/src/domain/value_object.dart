@@ -19,12 +19,6 @@ class IntFieldObject extends FormFieldObject<int?, NumberInputFailure> {
           validator: validator,
           value: value,
         );
-
-  IntFieldObject.masteryLevel()
-      : super.generate(
-          validator: NumberValidator.masteryLevel(),
-          value: 85,
-        );
 }
 
 class DateFieldObject extends FormFieldObject<DateTime?, DateTimeInputFailure> {
@@ -35,11 +29,6 @@ class DateFieldObject extends FormFieldObject<DateTime?, DateTimeInputFailure> {
           validator: validator,
           value: value,
         );
-  
-  DateFieldObject.dateOfBirthForStudents() : super.generate(
-    validator: DateValidator.dateOfBirth(),
-    value: null,
-  );
 }
 
 class StringFieldObject extends FormFieldObject<String, TextInputFailure> {
@@ -65,29 +54,9 @@ class StringFieldObject extends FormFieldObject<String, TextInputFailure> {
           value: '',
         );
 
-  StringFieldObject.parentEmail()
-      : super.generate(
-          validator: TextValidator.email(),
-          value: '',
-        );
-
-  StringFieldObject.studentEmail()
-      : super.generate(
-          validator: TextValidator.email(
-            isRequired: false,
-          ),
-          value: '',
-        );
-
   StringFieldObject.password()
       : super.generate(
           validator: TextValidator.password(),
-          value: '',
-        );
-
-  StringFieldObject.studentPassword()
-      : super.generate(
-          validator: TextValidator.studentPassword(),
           value: '',
         );
 
