@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'password_failure.dart';
 
@@ -10,25 +12,7 @@ part of 'password_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$PasswordFailureTearOff {
-  const _$PasswordFailureTearOff();
-
-  _WrongPassword wrongPassword() {
-    return const _WrongPassword();
-  }
-
-  _WeakPassword weakPassword([String? message]) {
-    return _WeakPassword(
-      message,
-    );
-  }
-}
-
-/// @nodoc
-const $PasswordFailure = _$PasswordFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$PasswordFailure {
@@ -36,6 +20,12 @@ mixin _$PasswordFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() wrongPassword,
     required TResult Function(String? message) weakPassword,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? wrongPassword,
+    TResult Function(String? message)? weakPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,6 +39,12 @@ mixin _$PasswordFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_WrongPassword value) wrongPassword,
     required TResult Function(_WeakPassword value) weakPassword,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_WeakPassword value)? weakPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,22 +74,22 @@ class _$PasswordFailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$WrongPasswordCopyWith<$Res> {
-  factory _$WrongPasswordCopyWith(
-          _WrongPassword value, $Res Function(_WrongPassword) then) =
-      __$WrongPasswordCopyWithImpl<$Res>;
+abstract class _$$_WrongPasswordCopyWith<$Res> {
+  factory _$$_WrongPasswordCopyWith(
+          _$_WrongPassword value, $Res Function(_$_WrongPassword) then) =
+      __$$_WrongPasswordCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$WrongPasswordCopyWithImpl<$Res>
+class __$$_WrongPasswordCopyWithImpl<$Res>
     extends _$PasswordFailureCopyWithImpl<$Res>
-    implements _$WrongPasswordCopyWith<$Res> {
-  __$WrongPasswordCopyWithImpl(
-      _WrongPassword _value, $Res Function(_WrongPassword) _then)
-      : super(_value, (v) => _then(v as _WrongPassword));
+    implements _$$_WrongPasswordCopyWith<$Res> {
+  __$$_WrongPasswordCopyWithImpl(
+      _$_WrongPassword _value, $Res Function(_$_WrongPassword) _then)
+      : super(_value, (v) => _then(v as _$_WrongPassword));
 
   @override
-  _WrongPassword get _value => super._value as _WrongPassword;
+  _$_WrongPassword get _value => super._value as _$_WrongPassword;
 }
 
 /// @nodoc
@@ -108,7 +104,8 @@ class _$_WrongPassword extends _WrongPassword {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _WrongPassword);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_WrongPassword);
   }
 
   @override
@@ -121,6 +118,15 @@ class _$_WrongPassword extends _WrongPassword {
     required TResult Function(String? message) weakPassword,
   }) {
     return wrongPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? wrongPassword,
+    TResult Function(String? message)? weakPassword,
+  }) {
+    return wrongPassword?.call();
   }
 
   @override
@@ -147,6 +153,15 @@ class _$_WrongPassword extends _WrongPassword {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_WeakPassword value)? weakPassword,
+  }) {
+    return wrongPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_WrongPassword value)? wrongPassword,
     TResult Function(_WeakPassword value)? weakPassword,
@@ -165,29 +180,29 @@ abstract class _WrongPassword extends PasswordFailure {
 }
 
 /// @nodoc
-abstract class _$WeakPasswordCopyWith<$Res> {
-  factory _$WeakPasswordCopyWith(
-          _WeakPassword value, $Res Function(_WeakPassword) then) =
-      __$WeakPasswordCopyWithImpl<$Res>;
+abstract class _$$_WeakPasswordCopyWith<$Res> {
+  factory _$$_WeakPasswordCopyWith(
+          _$_WeakPassword value, $Res Function(_$_WeakPassword) then) =
+      __$$_WeakPasswordCopyWithImpl<$Res>;
   $Res call({String? message});
 }
 
 /// @nodoc
-class __$WeakPasswordCopyWithImpl<$Res>
+class __$$_WeakPasswordCopyWithImpl<$Res>
     extends _$PasswordFailureCopyWithImpl<$Res>
-    implements _$WeakPasswordCopyWith<$Res> {
-  __$WeakPasswordCopyWithImpl(
-      _WeakPassword _value, $Res Function(_WeakPassword) _then)
-      : super(_value, (v) => _then(v as _WeakPassword));
+    implements _$$_WeakPasswordCopyWith<$Res> {
+  __$$_WeakPasswordCopyWithImpl(
+      _$_WeakPassword _value, $Res Function(_$_WeakPassword) _then)
+      : super(_value, (v) => _then(v as _$_WeakPassword));
 
   @override
-  _WeakPassword get _value => super._value as _WeakPassword;
+  _$_WeakPassword get _value => super._value as _$_WeakPassword;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(_WeakPassword(
+    return _then(_$_WeakPassword(
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -212,19 +227,19 @@ class _$_WeakPassword extends _WeakPassword {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _WeakPassword &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+        (other.runtimeType == runtimeType &&
+            other is _$_WeakPassword &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
-  _$WeakPasswordCopyWith<_WeakPassword> get copyWith =>
-      __$WeakPasswordCopyWithImpl<_WeakPassword>(this, _$identity);
+  _$$_WeakPasswordCopyWith<_$_WeakPassword> get copyWith =>
+      __$$_WeakPasswordCopyWithImpl<_$_WeakPassword>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -233,6 +248,15 @@ class _$_WeakPassword extends _WeakPassword {
     required TResult Function(String? message) weakPassword,
   }) {
     return weakPassword(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? wrongPassword,
+    TResult Function(String? message)? weakPassword,
+  }) {
+    return weakPassword?.call(message);
   }
 
   @override
@@ -259,6 +283,15 @@ class _$_WeakPassword extends _WeakPassword {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_WrongPassword value)? wrongPassword,
+    TResult Function(_WeakPassword value)? weakPassword,
+  }) {
+    return weakPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_WrongPassword value)? wrongPassword,
     TResult Function(_WeakPassword value)? weakPassword,
@@ -272,11 +305,11 @@ class _$_WeakPassword extends _WeakPassword {
 }
 
 abstract class _WeakPassword extends PasswordFailure {
-  const factory _WeakPassword([String? message]) = _$_WeakPassword;
+  const factory _WeakPassword([final String? message]) = _$_WeakPassword;
   const _WeakPassword._() : super._();
 
   String? get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$WeakPasswordCopyWith<_WeakPassword> get copyWith =>
+  _$$_WeakPasswordCopyWith<_$_WeakPassword> get copyWith =>
       throw _privateConstructorUsedError;
 }

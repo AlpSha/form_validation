@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'email_sign_in_failure.dart';
 
@@ -10,23 +12,7 @@ part of 'email_sign_in_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$EmailSignInFailureTearOff {
-  const _$EmailSignInFailureTearOff();
-
-  _InvalidEmail invalidEmail() {
-    return const _InvalidEmail();
-  }
-
-  _UserNotFound userNotFound() {
-    return const _UserNotFound();
-  }
-}
-
-/// @nodoc
-const $EmailSignInFailure = _$EmailSignInFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$EmailSignInFailure {
@@ -34,6 +20,12 @@ mixin _$EmailSignInFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? userNotFound,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +39,12 @@ mixin _$EmailSignInFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_InvalidEmail value) invalidEmail,
     required TResult Function(_UserNotFound value) userNotFound,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_UserNotFound value)? userNotFound,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,22 +74,22 @@ class _$EmailSignInFailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$InvalidEmailCopyWith<$Res> {
-  factory _$InvalidEmailCopyWith(
-          _InvalidEmail value, $Res Function(_InvalidEmail) then) =
-      __$InvalidEmailCopyWithImpl<$Res>;
+abstract class _$$_InvalidEmailCopyWith<$Res> {
+  factory _$$_InvalidEmailCopyWith(
+          _$_InvalidEmail value, $Res Function(_$_InvalidEmail) then) =
+      __$$_InvalidEmailCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InvalidEmailCopyWithImpl<$Res>
+class __$$_InvalidEmailCopyWithImpl<$Res>
     extends _$EmailSignInFailureCopyWithImpl<$Res>
-    implements _$InvalidEmailCopyWith<$Res> {
-  __$InvalidEmailCopyWithImpl(
-      _InvalidEmail _value, $Res Function(_InvalidEmail) _then)
-      : super(_value, (v) => _then(v as _InvalidEmail));
+    implements _$$_InvalidEmailCopyWith<$Res> {
+  __$$_InvalidEmailCopyWithImpl(
+      _$_InvalidEmail _value, $Res Function(_$_InvalidEmail) _then)
+      : super(_value, (v) => _then(v as _$_InvalidEmail));
 
   @override
-  _InvalidEmail get _value => super._value as _InvalidEmail;
+  _$_InvalidEmail get _value => super._value as _$_InvalidEmail;
 }
 
 /// @nodoc
@@ -106,7 +104,8 @@ class _$_InvalidEmail extends _InvalidEmail {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _InvalidEmail);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_InvalidEmail);
   }
 
   @override
@@ -119,6 +118,15 @@ class _$_InvalidEmail extends _InvalidEmail {
     required TResult Function() userNotFound,
   }) {
     return invalidEmail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? userNotFound,
+  }) {
+    return invalidEmail?.call();
   }
 
   @override
@@ -145,6 +153,15 @@ class _$_InvalidEmail extends _InvalidEmail {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_UserNotFound value)? userNotFound,
+  }) {
+    return invalidEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InvalidEmail value)? invalidEmail,
     TResult Function(_UserNotFound value)? userNotFound,
@@ -163,22 +180,22 @@ abstract class _InvalidEmail extends EmailSignInFailure {
 }
 
 /// @nodoc
-abstract class _$UserNotFoundCopyWith<$Res> {
-  factory _$UserNotFoundCopyWith(
-          _UserNotFound value, $Res Function(_UserNotFound) then) =
-      __$UserNotFoundCopyWithImpl<$Res>;
+abstract class _$$_UserNotFoundCopyWith<$Res> {
+  factory _$$_UserNotFoundCopyWith(
+          _$_UserNotFound value, $Res Function(_$_UserNotFound) then) =
+      __$$_UserNotFoundCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$UserNotFoundCopyWithImpl<$Res>
+class __$$_UserNotFoundCopyWithImpl<$Res>
     extends _$EmailSignInFailureCopyWithImpl<$Res>
-    implements _$UserNotFoundCopyWith<$Res> {
-  __$UserNotFoundCopyWithImpl(
-      _UserNotFound _value, $Res Function(_UserNotFound) _then)
-      : super(_value, (v) => _then(v as _UserNotFound));
+    implements _$$_UserNotFoundCopyWith<$Res> {
+  __$$_UserNotFoundCopyWithImpl(
+      _$_UserNotFound _value, $Res Function(_$_UserNotFound) _then)
+      : super(_value, (v) => _then(v as _$_UserNotFound));
 
   @override
-  _UserNotFound get _value => super._value as _UserNotFound;
+  _$_UserNotFound get _value => super._value as _$_UserNotFound;
 }
 
 /// @nodoc
@@ -193,7 +210,8 @@ class _$_UserNotFound extends _UserNotFound {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _UserNotFound);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_UserNotFound);
   }
 
   @override
@@ -206,6 +224,15 @@ class _$_UserNotFound extends _UserNotFound {
     required TResult Function() userNotFound,
   }) {
     return userNotFound();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? userNotFound,
+  }) {
+    return userNotFound?.call();
   }
 
   @override
@@ -228,6 +255,15 @@ class _$_UserNotFound extends _UserNotFound {
     required TResult Function(_UserNotFound value) userNotFound,
   }) {
     return userNotFound(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_UserNotFound value)? userNotFound,
+  }) {
+    return userNotFound?.call(this);
   }
 
   @override
