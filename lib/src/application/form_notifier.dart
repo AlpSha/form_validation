@@ -24,11 +24,11 @@ class CustomFormState<V extends FormFieldsMixin, F> with _$CustomFormState<V, F>
     required V fields,
   }) = _FormIsEdited<V, F>;
   const factory CustomFormState.failure(
-    F failure, {
-    @Default(true) bool isFormSent,
-    @Default(true) bool isFormValid,
-    required V fields,
-  }) = _Failure<V, F>;
+      F failure, {
+        @Default(true) bool isFormSent,
+        @Default(true) bool isFormValid,
+        required V fields,
+      }) = _Failure<V, F>;
   const factory CustomFormState.success({
     @Default(true) bool isFormSent,
     @Default(true) bool isFormValid,
@@ -37,14 +37,15 @@ class CustomFormState<V extends FormFieldsMixin, F> with _$CustomFormState<V, F>
 }
 
 abstract class FormNotifier<V extends FormFieldsMixin, F> extends StateNotifier<CustomFormState<V, F>> with FormMixin {
-  FormNotifier(this.fieldsGenerator)
+  FormNotifier(this.fieldsGenerator, {bool isFormValidInitially = false})
       : super(
-          CustomFormState<V, F>.initial(
-            fields: fieldsGenerator(),
-          ),
-        ) {
-          _setOwnerOfFields();
-        }
+    CustomFormState<V, F>.initial(
+      fields: fieldsGenerator(),
+      isFormValid: isFormValidInitially,
+    ),
+  ) {
+    _setOwnerOfFields();
+  }
 
   final formKey = GlobalKey<FormState>();
 
@@ -64,6 +65,7 @@ abstract class FormNotifier<V extends FormFieldsMixin, F> extends StateNotifier<
       fields: fieldsGenerator(),
     );
     formKey.currentState?.reset();
+    _setOwnerOfFields();
   }
 
   void _setOwnerOfFields() {
