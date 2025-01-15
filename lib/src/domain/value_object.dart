@@ -40,7 +40,7 @@ class StringFieldObject extends FormFieldObject<String, TextInputFailure> {
           validator: validator,
           value: value,
         );
-  
+
   String? get valueAsNullIfEmpty => value == '' ? null : value;
 
   StringFieldObject.username()
@@ -122,7 +122,7 @@ class FormFieldObject<V, F> {
     );
     notifyOwner();
   }
-  
+
   void notifyOwner() {
     owner?.updateState();
   }
@@ -155,9 +155,7 @@ class ValueObject<V, F> with _$ValueObject<V, F> {
     required V value,
     required F failure,
   }) = _Failure<V, F>;
-}
 
-extension ValueObjectX on ValueObject {
   bool get isValid => maybeMap(
         valid: (_) => true,
         orElse: () => false,
@@ -168,3 +166,4 @@ extension ValueObjectX on ValueObject {
         orElse: () => false,
       );
 }
+

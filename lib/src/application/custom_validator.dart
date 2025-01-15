@@ -27,7 +27,6 @@ abstract class CustomValidator<V, F> {
 
 @freezed
 class ValidationResult<V, F> with _$ValidationResult<V, F> {
-  const ValidationResult._();
   const factory ValidationResult.success(V value) = _Success<V, F>;
   const factory ValidationResult.failure(F failure) = _Failure<V, F>;
 }

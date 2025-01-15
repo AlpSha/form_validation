@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'input_failure.dart';
 
@@ -12,7 +12,7 @@ part of 'input_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TextInputFailure {
@@ -27,11 +27,11 @@ mixin _$TextInputFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? invalid,
-    TResult Function(int minChars)? tooShort,
-    TResult Function(int maxChars)? tooLong,
-    TResult Function()? empty,
-    TResult Function()? notUnique,
+    TResult? Function()? invalid,
+    TResult? Function(int minChars)? tooShort,
+    TResult? Function(int maxChars)? tooLong,
+    TResult? Function()? empty,
+    TResult? Function()? notUnique,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,11 +55,11 @@ mixin _$TextInputFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Invalid value)? invalid,
-    TResult Function(_TooShort value)? tooShort,
-    TResult Function(_TooLong value)? tooLong,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_NotUnique value)? notUnique,
+    TResult? Function(_Invalid value)? invalid,
+    TResult? Function(_TooShort value)? tooShort,
+    TResult? Function(_TooLong value)? tooLong,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NotUnique value)? notUnique,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,41 +78,46 @@ mixin _$TextInputFailure {
 abstract class $TextInputFailureCopyWith<$Res> {
   factory $TextInputFailureCopyWith(
           TextInputFailure value, $Res Function(TextInputFailure) then) =
-      _$TextInputFailureCopyWithImpl<$Res>;
+      _$TextInputFailureCopyWithImpl<$Res, TextInputFailure>;
 }
 
 /// @nodoc
-class _$TextInputFailureCopyWithImpl<$Res>
+class _$TextInputFailureCopyWithImpl<$Res, $Val extends TextInputFailure>
     implements $TextInputFailureCopyWith<$Res> {
   _$TextInputFailureCopyWithImpl(this._value, this._then);
 
-  final TextInputFailure _value;
   // ignore: unused_field
-  final $Res Function(TextInputFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_InvalidCopyWith<$Res> {
-  factory _$$_InvalidCopyWith(
-          _$_Invalid value, $Res Function(_$_Invalid) then) =
-      __$$_InvalidCopyWithImpl<$Res>;
+abstract class _$$InvalidImplCopyWith<$Res> {
+  factory _$$InvalidImplCopyWith(
+          _$InvalidImpl value, $Res Function(_$InvalidImpl) then) =
+      __$$InvalidImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InvalidCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res>
-    implements _$$_InvalidCopyWith<$Res> {
-  __$$_InvalidCopyWithImpl(_$_Invalid _value, $Res Function(_$_Invalid) _then)
-      : super(_value, (v) => _then(v as _$_Invalid));
+class __$$InvalidImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$InvalidImpl>
+    implements _$$InvalidImplCopyWith<$Res> {
+  __$$InvalidImplCopyWithImpl(
+      _$InvalidImpl _value, $Res Function(_$InvalidImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Invalid get _value => super._value as _$_Invalid;
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_Invalid extends _Invalid {
-  const _$_Invalid() : super._();
+class _$InvalidImpl implements _Invalid {
+  const _$InvalidImpl();
 
   @override
   String toString() {
@@ -120,9 +125,9 @@ class _$_Invalid extends _Invalid {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Invalid);
+        (other.runtimeType == runtimeType && other is _$InvalidImpl);
   }
 
   @override
@@ -143,11 +148,11 @@ class _$_Invalid extends _Invalid {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? invalid,
-    TResult Function(int minChars)? tooShort,
-    TResult Function(int maxChars)? tooLong,
-    TResult Function()? empty,
-    TResult Function()? notUnique,
+    TResult? Function()? invalid,
+    TResult? Function(int minChars)? tooShort,
+    TResult? Function(int maxChars)? tooLong,
+    TResult? Function()? empty,
+    TResult? Function()? notUnique,
   }) {
     return invalid?.call();
   }
@@ -183,11 +188,11 @@ class _$_Invalid extends _Invalid {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Invalid value)? invalid,
-    TResult Function(_TooShort value)? tooShort,
-    TResult Function(_TooLong value)? tooLong,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_NotUnique value)? notUnique,
+    TResult? Function(_Invalid value)? invalid,
+    TResult? Function(_TooShort value)? tooShort,
+    TResult? Function(_TooLong value)? tooLong,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NotUnique value)? notUnique,
   }) {
     return invalid?.call(this);
   }
@@ -209,36 +214,36 @@ class _$_Invalid extends _Invalid {
   }
 }
 
-abstract class _Invalid extends TextInputFailure {
-  const factory _Invalid() = _$_Invalid;
-  const _Invalid._() : super._();
+abstract class _Invalid implements TextInputFailure {
+  const factory _Invalid() = _$InvalidImpl;
 }
 
 /// @nodoc
-abstract class _$$_TooShortCopyWith<$Res> {
-  factory _$$_TooShortCopyWith(
-          _$_TooShort value, $Res Function(_$_TooShort) then) =
-      __$$_TooShortCopyWithImpl<$Res>;
+abstract class _$$TooShortImplCopyWith<$Res> {
+  factory _$$TooShortImplCopyWith(
+          _$TooShortImpl value, $Res Function(_$TooShortImpl) then) =
+      __$$TooShortImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int minChars});
 }
 
 /// @nodoc
-class __$$_TooShortCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res>
-    implements _$$_TooShortCopyWith<$Res> {
-  __$$_TooShortCopyWithImpl(
-      _$_TooShort _value, $Res Function(_$_TooShort) _then)
-      : super(_value, (v) => _then(v as _$_TooShort));
+class __$$TooShortImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$TooShortImpl>
+    implements _$$TooShortImplCopyWith<$Res> {
+  __$$TooShortImplCopyWithImpl(
+      _$TooShortImpl _value, $Res Function(_$TooShortImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_TooShort get _value => super._value as _$_TooShort;
-
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? minChars = freezed,
+    Object? minChars = null,
   }) {
-    return _then(_$_TooShort(
-      minChars == freezed
+    return _then(_$TooShortImpl(
+      null == minChars
           ? _value.minChars
           : minChars // ignore: cast_nullable_to_non_nullable
               as int,
@@ -248,8 +253,8 @@ class __$$_TooShortCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooShort extends _TooShort {
-  const _$_TooShort(this.minChars) : super._();
+class _$TooShortImpl implements _TooShort {
+  const _$TooShortImpl(this.minChars);
 
   @override
   final int minChars;
@@ -260,21 +265,24 @@ class _$_TooShort extends _TooShort {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooShort &&
-            const DeepCollectionEquality().equals(other.minChars, minChars));
+            other is _$TooShortImpl &&
+            (identical(other.minChars, minChars) ||
+                other.minChars == minChars));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(minChars));
+  int get hashCode => Object.hash(runtimeType, minChars);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$$_TooShortCopyWith<_$_TooShort> get copyWith =>
-      __$$_TooShortCopyWithImpl<_$_TooShort>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TooShortImplCopyWith<_$TooShortImpl> get copyWith =>
+      __$$TooShortImplCopyWithImpl<_$TooShortImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -291,11 +299,11 @@ class _$_TooShort extends _TooShort {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? invalid,
-    TResult Function(int minChars)? tooShort,
-    TResult Function(int maxChars)? tooLong,
-    TResult Function()? empty,
-    TResult Function()? notUnique,
+    TResult? Function()? invalid,
+    TResult? Function(int minChars)? tooShort,
+    TResult? Function(int maxChars)? tooLong,
+    TResult? Function()? empty,
+    TResult? Function()? notUnique,
   }) {
     return tooShort?.call(minChars);
   }
@@ -331,11 +339,11 @@ class _$_TooShort extends _TooShort {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Invalid value)? invalid,
-    TResult Function(_TooShort value)? tooShort,
-    TResult Function(_TooLong value)? tooLong,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_NotUnique value)? notUnique,
+    TResult? Function(_Invalid value)? invalid,
+    TResult? Function(_TooShort value)? tooShort,
+    TResult? Function(_TooLong value)? tooLong,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NotUnique value)? notUnique,
   }) {
     return tooShort?.call(this);
   }
@@ -357,40 +365,44 @@ class _$_TooShort extends _TooShort {
   }
 }
 
-abstract class _TooShort extends TextInputFailure {
-  const factory _TooShort(final int minChars) = _$_TooShort;
-  const _TooShort._() : super._();
+abstract class _TooShort implements TextInputFailure {
+  const factory _TooShort(final int minChars) = _$TooShortImpl;
 
-  int get minChars => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$$_TooShortCopyWith<_$_TooShort> get copyWith =>
+  int get minChars;
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooShortImplCopyWith<_$TooShortImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_TooLongCopyWith<$Res> {
-  factory _$$_TooLongCopyWith(
-          _$_TooLong value, $Res Function(_$_TooLong) then) =
-      __$$_TooLongCopyWithImpl<$Res>;
+abstract class _$$TooLongImplCopyWith<$Res> {
+  factory _$$TooLongImplCopyWith(
+          _$TooLongImpl value, $Res Function(_$TooLongImpl) then) =
+      __$$TooLongImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int maxChars});
 }
 
 /// @nodoc
-class __$$_TooLongCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res>
-    implements _$$_TooLongCopyWith<$Res> {
-  __$$_TooLongCopyWithImpl(_$_TooLong _value, $Res Function(_$_TooLong) _then)
-      : super(_value, (v) => _then(v as _$_TooLong));
+class __$$TooLongImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$TooLongImpl>
+    implements _$$TooLongImplCopyWith<$Res> {
+  __$$TooLongImplCopyWithImpl(
+      _$TooLongImpl _value, $Res Function(_$TooLongImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_TooLong get _value => super._value as _$_TooLong;
-
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxChars = freezed,
+    Object? maxChars = null,
   }) {
-    return _then(_$_TooLong(
-      maxChars == freezed
+    return _then(_$TooLongImpl(
+      null == maxChars
           ? _value.maxChars
           : maxChars // ignore: cast_nullable_to_non_nullable
               as int,
@@ -400,8 +412,8 @@ class __$$_TooLongCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooLong extends _TooLong {
-  const _$_TooLong(this.maxChars) : super._();
+class _$TooLongImpl implements _TooLong {
+  const _$TooLongImpl(this.maxChars);
 
   @override
   final int maxChars;
@@ -412,21 +424,24 @@ class _$_TooLong extends _TooLong {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooLong &&
-            const DeepCollectionEquality().equals(other.maxChars, maxChars));
+            other is _$TooLongImpl &&
+            (identical(other.maxChars, maxChars) ||
+                other.maxChars == maxChars));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(maxChars));
+  int get hashCode => Object.hash(runtimeType, maxChars);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$$_TooLongCopyWith<_$_TooLong> get copyWith =>
-      __$$_TooLongCopyWithImpl<_$_TooLong>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TooLongImplCopyWith<_$TooLongImpl> get copyWith =>
+      __$$TooLongImplCopyWithImpl<_$TooLongImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -443,11 +458,11 @@ class _$_TooLong extends _TooLong {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? invalid,
-    TResult Function(int minChars)? tooShort,
-    TResult Function(int maxChars)? tooLong,
-    TResult Function()? empty,
-    TResult Function()? notUnique,
+    TResult? Function()? invalid,
+    TResult? Function(int minChars)? tooShort,
+    TResult? Function(int maxChars)? tooLong,
+    TResult? Function()? empty,
+    TResult? Function()? notUnique,
   }) {
     return tooLong?.call(maxChars);
   }
@@ -483,11 +498,11 @@ class _$_TooLong extends _TooLong {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Invalid value)? invalid,
-    TResult Function(_TooShort value)? tooShort,
-    TResult Function(_TooLong value)? tooLong,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_NotUnique value)? notUnique,
+    TResult? Function(_Invalid value)? invalid,
+    TResult? Function(_TooShort value)? tooShort,
+    TResult? Function(_TooLong value)? tooLong,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NotUnique value)? notUnique,
   }) {
     return tooLong?.call(this);
   }
@@ -509,36 +524,41 @@ class _$_TooLong extends _TooLong {
   }
 }
 
-abstract class _TooLong extends TextInputFailure {
-  const factory _TooLong(final int maxChars) = _$_TooLong;
-  const _TooLong._() : super._();
+abstract class _TooLong implements TextInputFailure {
+  const factory _TooLong(final int maxChars) = _$TooLongImpl;
 
-  int get maxChars => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$$_TooLongCopyWith<_$_TooLong> get copyWith =>
+  int get maxChars;
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooLongImplCopyWith<_$TooLongImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_EmptyCopyWith<$Res> {
-  factory _$$_EmptyCopyWith(_$_Empty value, $Res Function(_$_Empty) then) =
-      __$$_EmptyCopyWithImpl<$Res>;
+abstract class _$$EmptyImplCopyWith<$Res> {
+  factory _$$EmptyImplCopyWith(
+          _$EmptyImpl value, $Res Function(_$EmptyImpl) then) =
+      __$$EmptyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyCopyWithImpl<$Res> extends _$TextInputFailureCopyWithImpl<$Res>
-    implements _$$_EmptyCopyWith<$Res> {
-  __$$_EmptyCopyWithImpl(_$_Empty _value, $Res Function(_$_Empty) _then)
-      : super(_value, (v) => _then(v as _$_Empty));
+class __$$EmptyImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$EmptyImpl>
+    implements _$$EmptyImplCopyWith<$Res> {
+  __$$EmptyImplCopyWithImpl(
+      _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Empty get _value => super._value as _$_Empty;
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_Empty extends _Empty {
-  const _$_Empty() : super._();
+class _$EmptyImpl implements _Empty {
+  const _$EmptyImpl();
 
   @override
   String toString() {
@@ -546,9 +566,9 @@ class _$_Empty extends _Empty {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Empty);
+        (other.runtimeType == runtimeType && other is _$EmptyImpl);
   }
 
   @override
@@ -569,11 +589,11 @@ class _$_Empty extends _Empty {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? invalid,
-    TResult Function(int minChars)? tooShort,
-    TResult Function(int maxChars)? tooLong,
-    TResult Function()? empty,
-    TResult Function()? notUnique,
+    TResult? Function()? invalid,
+    TResult? Function(int minChars)? tooShort,
+    TResult? Function(int maxChars)? tooLong,
+    TResult? Function()? empty,
+    TResult? Function()? notUnique,
   }) {
     return empty?.call();
   }
@@ -609,11 +629,11 @@ class _$_Empty extends _Empty {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Invalid value)? invalid,
-    TResult Function(_TooShort value)? tooShort,
-    TResult Function(_TooLong value)? tooLong,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_NotUnique value)? notUnique,
+    TResult? Function(_Invalid value)? invalid,
+    TResult? Function(_TooShort value)? tooShort,
+    TResult? Function(_TooLong value)? tooLong,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NotUnique value)? notUnique,
   }) {
     return empty?.call(this);
   }
@@ -635,34 +655,33 @@ class _$_Empty extends _Empty {
   }
 }
 
-abstract class _Empty extends TextInputFailure {
-  const factory _Empty() = _$_Empty;
-  const _Empty._() : super._();
+abstract class _Empty implements TextInputFailure {
+  const factory _Empty() = _$EmptyImpl;
 }
 
 /// @nodoc
-abstract class _$$_NotUniqueCopyWith<$Res> {
-  factory _$$_NotUniqueCopyWith(
-          _$_NotUnique value, $Res Function(_$_NotUnique) then) =
-      __$$_NotUniqueCopyWithImpl<$Res>;
+abstract class _$$NotUniqueImplCopyWith<$Res> {
+  factory _$$NotUniqueImplCopyWith(
+          _$NotUniqueImpl value, $Res Function(_$NotUniqueImpl) then) =
+      __$$NotUniqueImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_NotUniqueCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res>
-    implements _$$_NotUniqueCopyWith<$Res> {
-  __$$_NotUniqueCopyWithImpl(
-      _$_NotUnique _value, $Res Function(_$_NotUnique) _then)
-      : super(_value, (v) => _then(v as _$_NotUnique));
+class __$$NotUniqueImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$NotUniqueImpl>
+    implements _$$NotUniqueImplCopyWith<$Res> {
+  __$$NotUniqueImplCopyWithImpl(
+      _$NotUniqueImpl _value, $Res Function(_$NotUniqueImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_NotUnique get _value => super._value as _$_NotUnique;
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_NotUnique extends _NotUnique {
-  const _$_NotUnique() : super._();
+class _$NotUniqueImpl implements _NotUnique {
+  const _$NotUniqueImpl();
 
   @override
   String toString() {
@@ -670,9 +689,9 @@ class _$_NotUnique extends _NotUnique {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NotUnique);
+        (other.runtimeType == runtimeType && other is _$NotUniqueImpl);
   }
 
   @override
@@ -693,11 +712,11 @@ class _$_NotUnique extends _NotUnique {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? invalid,
-    TResult Function(int minChars)? tooShort,
-    TResult Function(int maxChars)? tooLong,
-    TResult Function()? empty,
-    TResult Function()? notUnique,
+    TResult? Function()? invalid,
+    TResult? Function(int minChars)? tooShort,
+    TResult? Function(int maxChars)? tooLong,
+    TResult? Function()? empty,
+    TResult? Function()? notUnique,
   }) {
     return notUnique?.call();
   }
@@ -733,11 +752,11 @@ class _$_NotUnique extends _NotUnique {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Invalid value)? invalid,
-    TResult Function(_TooShort value)? tooShort,
-    TResult Function(_TooLong value)? tooLong,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_NotUnique value)? notUnique,
+    TResult? Function(_Invalid value)? invalid,
+    TResult? Function(_TooShort value)? tooShort,
+    TResult? Function(_TooLong value)? tooLong,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NotUnique value)? notUnique,
   }) {
     return notUnique?.call(this);
   }
@@ -759,9 +778,8 @@ class _$_NotUnique extends _NotUnique {
   }
 }
 
-abstract class _NotUnique extends TextInputFailure {
-  const factory _NotUnique() = _$_NotUnique;
-  const _NotUnique._() : super._();
+abstract class _NotUnique implements TextInputFailure {
+  const factory _NotUnique() = _$NotUniqueImpl;
 }
 
 /// @nodoc
@@ -773,7 +791,7 @@ mixin _$DateTimeInputFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? empty,
+    TResult? Function()? empty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -789,7 +807,7 @@ mixin _$DateTimeInputFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_EmptyDate value)? empty,
+    TResult? Function(_EmptyDate value)? empty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -804,42 +822,47 @@ mixin _$DateTimeInputFailure {
 abstract class $DateTimeInputFailureCopyWith<$Res> {
   factory $DateTimeInputFailureCopyWith(DateTimeInputFailure value,
           $Res Function(DateTimeInputFailure) then) =
-      _$DateTimeInputFailureCopyWithImpl<$Res>;
+      _$DateTimeInputFailureCopyWithImpl<$Res, DateTimeInputFailure>;
 }
 
 /// @nodoc
-class _$DateTimeInputFailureCopyWithImpl<$Res>
+class _$DateTimeInputFailureCopyWithImpl<$Res,
+        $Val extends DateTimeInputFailure>
     implements $DateTimeInputFailureCopyWith<$Res> {
   _$DateTimeInputFailureCopyWithImpl(this._value, this._then);
 
-  final DateTimeInputFailure _value;
   // ignore: unused_field
-  final $Res Function(DateTimeInputFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_EmptyDateCopyWith<$Res> {
-  factory _$$_EmptyDateCopyWith(
-          _$_EmptyDate value, $Res Function(_$_EmptyDate) then) =
-      __$$_EmptyDateCopyWithImpl<$Res>;
+abstract class _$$EmptyDateImplCopyWith<$Res> {
+  factory _$$EmptyDateImplCopyWith(
+          _$EmptyDateImpl value, $Res Function(_$EmptyDateImpl) then) =
+      __$$EmptyDateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyDateCopyWithImpl<$Res>
-    extends _$DateTimeInputFailureCopyWithImpl<$Res>
-    implements _$$_EmptyDateCopyWith<$Res> {
-  __$$_EmptyDateCopyWithImpl(
-      _$_EmptyDate _value, $Res Function(_$_EmptyDate) _then)
-      : super(_value, (v) => _then(v as _$_EmptyDate));
+class __$$EmptyDateImplCopyWithImpl<$Res>
+    extends _$DateTimeInputFailureCopyWithImpl<$Res, _$EmptyDateImpl>
+    implements _$$EmptyDateImplCopyWith<$Res> {
+  __$$EmptyDateImplCopyWithImpl(
+      _$EmptyDateImpl _value, $Res Function(_$EmptyDateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_EmptyDate get _value => super._value as _$_EmptyDate;
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_EmptyDate extends _EmptyDate {
-  const _$_EmptyDate() : super._();
+class _$EmptyDateImpl implements _EmptyDate {
+  const _$EmptyDateImpl();
 
   @override
   String toString() {
@@ -847,9 +870,9 @@ class _$_EmptyDate extends _EmptyDate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EmptyDate);
+        (other.runtimeType == runtimeType && other is _$EmptyDateImpl);
   }
 
   @override
@@ -866,7 +889,7 @@ class _$_EmptyDate extends _EmptyDate {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? empty,
+    TResult? Function()? empty,
   }) {
     return empty?.call();
   }
@@ -894,7 +917,7 @@ class _$_EmptyDate extends _EmptyDate {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_EmptyDate value)? empty,
+    TResult? Function(_EmptyDate value)? empty,
   }) {
     return empty?.call(this);
   }
@@ -912,9 +935,8 @@ class _$_EmptyDate extends _EmptyDate {
   }
 }
 
-abstract class _EmptyDate extends DateTimeInputFailure {
-  const factory _EmptyDate() = _$_EmptyDate;
-  const _EmptyDate._() : super._();
+abstract class _EmptyDate implements DateTimeInputFailure {
+  const factory _EmptyDate() = _$EmptyDateImpl;
 }
 
 /// @nodoc
@@ -928,9 +950,9 @@ mixin _$NumberInputFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int min)? tooSmall,
-    TResult Function(int max)? tooBig,
-    TResult Function()? empty,
+    TResult? Function(int min)? tooSmall,
+    TResult? Function(int max)? tooBig,
+    TResult? Function()? empty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -950,9 +972,9 @@ mixin _$NumberInputFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_TooSmall value)? tooSmall,
-    TResult Function(_TooBig value)? tooBig,
-    TResult Function(_EmptyNumber value)? empty,
+    TResult? Function(_TooSmall value)? tooSmall,
+    TResult? Function(_TooBig value)? tooBig,
+    TResult? Function(_EmptyNumber value)? empty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -969,44 +991,49 @@ mixin _$NumberInputFailure {
 abstract class $NumberInputFailureCopyWith<$Res> {
   factory $NumberInputFailureCopyWith(
           NumberInputFailure value, $Res Function(NumberInputFailure) then) =
-      _$NumberInputFailureCopyWithImpl<$Res>;
+      _$NumberInputFailureCopyWithImpl<$Res, NumberInputFailure>;
 }
 
 /// @nodoc
-class _$NumberInputFailureCopyWithImpl<$Res>
+class _$NumberInputFailureCopyWithImpl<$Res, $Val extends NumberInputFailure>
     implements $NumberInputFailureCopyWith<$Res> {
   _$NumberInputFailureCopyWithImpl(this._value, this._then);
 
-  final NumberInputFailure _value;
   // ignore: unused_field
-  final $Res Function(NumberInputFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_TooSmallCopyWith<$Res> {
-  factory _$$_TooSmallCopyWith(
-          _$_TooSmall value, $Res Function(_$_TooSmall) then) =
-      __$$_TooSmallCopyWithImpl<$Res>;
+abstract class _$$TooSmallImplCopyWith<$Res> {
+  factory _$$TooSmallImplCopyWith(
+          _$TooSmallImpl value, $Res Function(_$TooSmallImpl) then) =
+      __$$TooSmallImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int min});
 }
 
 /// @nodoc
-class __$$_TooSmallCopyWithImpl<$Res>
-    extends _$NumberInputFailureCopyWithImpl<$Res>
-    implements _$$_TooSmallCopyWith<$Res> {
-  __$$_TooSmallCopyWithImpl(
-      _$_TooSmall _value, $Res Function(_$_TooSmall) _then)
-      : super(_value, (v) => _then(v as _$_TooSmall));
+class __$$TooSmallImplCopyWithImpl<$Res>
+    extends _$NumberInputFailureCopyWithImpl<$Res, _$TooSmallImpl>
+    implements _$$TooSmallImplCopyWith<$Res> {
+  __$$TooSmallImplCopyWithImpl(
+      _$TooSmallImpl _value, $Res Function(_$TooSmallImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_TooSmall get _value => super._value as _$_TooSmall;
-
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? min = freezed,
+    Object? min = null,
   }) {
-    return _then(_$_TooSmall(
-      min == freezed
+    return _then(_$TooSmallImpl(
+      null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1016,8 +1043,8 @@ class __$$_TooSmallCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooSmall extends _TooSmall {
-  const _$_TooSmall(this.min) : super._();
+class _$TooSmallImpl implements _TooSmall {
+  const _$TooSmallImpl(this.min);
 
   @override
   final int min;
@@ -1028,21 +1055,23 @@ class _$_TooSmall extends _TooSmall {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooSmall &&
-            const DeepCollectionEquality().equals(other.min, min));
+            other is _$TooSmallImpl &&
+            (identical(other.min, min) || other.min == min));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(min));
+  int get hashCode => Object.hash(runtimeType, min);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$$_TooSmallCopyWith<_$_TooSmall> get copyWith =>
-      __$$_TooSmallCopyWithImpl<_$_TooSmall>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TooSmallImplCopyWith<_$TooSmallImpl> get copyWith =>
+      __$$TooSmallImplCopyWithImpl<_$TooSmallImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1057,9 +1086,9 @@ class _$_TooSmall extends _TooSmall {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int min)? tooSmall,
-    TResult Function(int max)? tooBig,
-    TResult Function()? empty,
+    TResult? Function(int min)? tooSmall,
+    TResult? Function(int max)? tooBig,
+    TResult? Function()? empty,
   }) {
     return tooSmall?.call(min);
   }
@@ -1091,9 +1120,9 @@ class _$_TooSmall extends _TooSmall {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_TooSmall value)? tooSmall,
-    TResult Function(_TooBig value)? tooBig,
-    TResult Function(_EmptyNumber value)? empty,
+    TResult? Function(_TooSmall value)? tooSmall,
+    TResult? Function(_TooBig value)? tooBig,
+    TResult? Function(_EmptyNumber value)? empty,
   }) {
     return tooSmall?.call(this);
   }
@@ -1113,39 +1142,44 @@ class _$_TooSmall extends _TooSmall {
   }
 }
 
-abstract class _TooSmall extends NumberInputFailure {
-  const factory _TooSmall(final int min) = _$_TooSmall;
-  const _TooSmall._() : super._();
+abstract class _TooSmall implements NumberInputFailure {
+  const factory _TooSmall(final int min) = _$TooSmallImpl;
 
-  int get min => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$$_TooSmallCopyWith<_$_TooSmall> get copyWith =>
+  int get min;
+
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooSmallImplCopyWith<_$TooSmallImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_TooBigCopyWith<$Res> {
-  factory _$$_TooBigCopyWith(_$_TooBig value, $Res Function(_$_TooBig) then) =
-      __$$_TooBigCopyWithImpl<$Res>;
+abstract class _$$TooBigImplCopyWith<$Res> {
+  factory _$$TooBigImplCopyWith(
+          _$TooBigImpl value, $Res Function(_$TooBigImpl) then) =
+      __$$TooBigImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int max});
 }
 
 /// @nodoc
-class __$$_TooBigCopyWithImpl<$Res>
-    extends _$NumberInputFailureCopyWithImpl<$Res>
-    implements _$$_TooBigCopyWith<$Res> {
-  __$$_TooBigCopyWithImpl(_$_TooBig _value, $Res Function(_$_TooBig) _then)
-      : super(_value, (v) => _then(v as _$_TooBig));
+class __$$TooBigImplCopyWithImpl<$Res>
+    extends _$NumberInputFailureCopyWithImpl<$Res, _$TooBigImpl>
+    implements _$$TooBigImplCopyWith<$Res> {
+  __$$TooBigImplCopyWithImpl(
+      _$TooBigImpl _value, $Res Function(_$TooBigImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_TooBig get _value => super._value as _$_TooBig;
-
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? max = freezed,
+    Object? max = null,
   }) {
-    return _then(_$_TooBig(
-      max == freezed
+    return _then(_$TooBigImpl(
+      null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1155,8 +1189,8 @@ class __$$_TooBigCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooBig extends _TooBig {
-  const _$_TooBig(this.max) : super._();
+class _$TooBigImpl implements _TooBig {
+  const _$TooBigImpl(this.max);
 
   @override
   final int max;
@@ -1167,21 +1201,23 @@ class _$_TooBig extends _TooBig {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooBig &&
-            const DeepCollectionEquality().equals(other.max, max));
+            other is _$TooBigImpl &&
+            (identical(other.max, max) || other.max == max));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(max));
+  int get hashCode => Object.hash(runtimeType, max);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$$_TooBigCopyWith<_$_TooBig> get copyWith =>
-      __$$_TooBigCopyWithImpl<_$_TooBig>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TooBigImplCopyWith<_$TooBigImpl> get copyWith =>
+      __$$TooBigImplCopyWithImpl<_$TooBigImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1196,9 +1232,9 @@ class _$_TooBig extends _TooBig {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int min)? tooSmall,
-    TResult Function(int max)? tooBig,
-    TResult Function()? empty,
+    TResult? Function(int min)? tooSmall,
+    TResult? Function(int max)? tooBig,
+    TResult? Function()? empty,
   }) {
     return tooBig?.call(max);
   }
@@ -1230,9 +1266,9 @@ class _$_TooBig extends _TooBig {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_TooSmall value)? tooSmall,
-    TResult Function(_TooBig value)? tooBig,
-    TResult Function(_EmptyNumber value)? empty,
+    TResult? Function(_TooSmall value)? tooSmall,
+    TResult? Function(_TooBig value)? tooBig,
+    TResult? Function(_EmptyNumber value)? empty,
   }) {
     return tooBig?.call(this);
   }
@@ -1252,39 +1288,41 @@ class _$_TooBig extends _TooBig {
   }
 }
 
-abstract class _TooBig extends NumberInputFailure {
-  const factory _TooBig(final int max) = _$_TooBig;
-  const _TooBig._() : super._();
+abstract class _TooBig implements NumberInputFailure {
+  const factory _TooBig(final int max) = _$TooBigImpl;
 
-  int get max => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$$_TooBigCopyWith<_$_TooBig> get copyWith =>
+  int get max;
+
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooBigImplCopyWith<_$TooBigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_EmptyNumberCopyWith<$Res> {
-  factory _$$_EmptyNumberCopyWith(
-          _$_EmptyNumber value, $Res Function(_$_EmptyNumber) then) =
-      __$$_EmptyNumberCopyWithImpl<$Res>;
+abstract class _$$EmptyNumberImplCopyWith<$Res> {
+  factory _$$EmptyNumberImplCopyWith(
+          _$EmptyNumberImpl value, $Res Function(_$EmptyNumberImpl) then) =
+      __$$EmptyNumberImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyNumberCopyWithImpl<$Res>
-    extends _$NumberInputFailureCopyWithImpl<$Res>
-    implements _$$_EmptyNumberCopyWith<$Res> {
-  __$$_EmptyNumberCopyWithImpl(
-      _$_EmptyNumber _value, $Res Function(_$_EmptyNumber) _then)
-      : super(_value, (v) => _then(v as _$_EmptyNumber));
+class __$$EmptyNumberImplCopyWithImpl<$Res>
+    extends _$NumberInputFailureCopyWithImpl<$Res, _$EmptyNumberImpl>
+    implements _$$EmptyNumberImplCopyWith<$Res> {
+  __$$EmptyNumberImplCopyWithImpl(
+      _$EmptyNumberImpl _value, $Res Function(_$EmptyNumberImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_EmptyNumber get _value => super._value as _$_EmptyNumber;
+  /// Create a copy of NumberInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_EmptyNumber extends _EmptyNumber {
-  const _$_EmptyNumber() : super._();
+class _$EmptyNumberImpl implements _EmptyNumber {
+  const _$EmptyNumberImpl();
 
   @override
   String toString() {
@@ -1292,9 +1330,9 @@ class _$_EmptyNumber extends _EmptyNumber {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EmptyNumber);
+        (other.runtimeType == runtimeType && other is _$EmptyNumberImpl);
   }
 
   @override
@@ -1313,9 +1351,9 @@ class _$_EmptyNumber extends _EmptyNumber {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int min)? tooSmall,
-    TResult Function(int max)? tooBig,
-    TResult Function()? empty,
+    TResult? Function(int min)? tooSmall,
+    TResult? Function(int max)? tooBig,
+    TResult? Function()? empty,
   }) {
     return empty?.call();
   }
@@ -1347,9 +1385,9 @@ class _$_EmptyNumber extends _EmptyNumber {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_TooSmall value)? tooSmall,
-    TResult Function(_TooBig value)? tooBig,
-    TResult Function(_EmptyNumber value)? empty,
+    TResult? Function(_TooSmall value)? tooSmall,
+    TResult? Function(_TooBig value)? tooBig,
+    TResult? Function(_EmptyNumber value)? empty,
   }) {
     return empty?.call(this);
   }
@@ -1369,7 +1407,6 @@ class _$_EmptyNumber extends _EmptyNumber {
   }
 }
 
-abstract class _EmptyNumber extends NumberInputFailure {
-  const factory _EmptyNumber() = _$_EmptyNumber;
-  const _EmptyNumber._() : super._();
+abstract class _EmptyNumber implements NumberInputFailure {
+  const factory _EmptyNumber() = _$EmptyNumberImpl;
 }

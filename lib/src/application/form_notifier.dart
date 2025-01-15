@@ -7,7 +7,6 @@ part 'form_notifier.freezed.dart';
 
 @freezed
 class CustomFormState<V extends FormFieldsMixin, F> with _$CustomFormState<V, F> {
-  const CustomFormState._();
   const factory CustomFormState.initial({
     @Default(false) bool isFormSent,
     @Default(false) bool isFormValid,
