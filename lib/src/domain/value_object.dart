@@ -1,33 +1,97 @@
+import 'package:form_handling/src/application/bool_validator.dart';
 import 'package:form_handling/src/application/custom_validator.dart';
 import 'package:form_handling/src/application/date_validator.dart';
+import 'package:form_handling/src/application/dropdown_validator.dart';
 import 'package:form_handling/src/application/form_notifier.dart';
+import 'package:form_handling/src/application/image_validator.dart';
 import 'package:form_handling/src/application/number_validator.dart';
 import 'package:form_handling/src/application/text_validator.dart';
+import 'package:form_handling/src/domain/image_type.dart';
 import 'package:form_handling/src/domain/input_failure.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'value_object.freezed.dart';
 
-typedef ErrorMessageGenerator<V> = String? Function(V? value);
+typedef FailureGenerator<V, F> = F? Function(V? value);
 
 // You can create more field objects with different types here
 
-class IntFieldObject extends FormFieldObject<int?, NumberInputFailure> {
-  IntFieldObject.generate({
-    required NumberValidator validator,
-    required int? value,
+class DropdownFieldObject<T> extends FormFieldObject<T?, DropdownInputFailure> {
+  DropdownFieldObject.generate({
+    required T? value,
+    required bool isRequired,
   }) : super.generate(
-          validator: validator,
+          validator: DropdownValidator(
+            isRequired: isRequired,
+          ),
+          value: value,
+        );
+}
+
+class IntFieldObject extends FormFieldObject<int?, IntInputFailure> {
+  IntFieldObject.generate({
+    required int? value,
+    required bool isRequired,
+    int? min,
+    int? max,
+  }) : super.generate(
+          validator: IntValidator(
+            min: min,
+            max: max,
+            isRequired: isRequired,
+          ),
+          value: value,
+        );
+}
+
+class DoubleFieldObject extends FormFieldObject<double?, DoubleInputFailure> {
+  DoubleFieldObject.generate({
+    required double? value,
+    required bool isRequired,
+    double? min,
+    double? max,
+  }) : super.generate(
+          validator: DoubleValidator(
+            isRequired: isRequired,
+            max: max,
+            min: min,
+          ),
+          value: value,
+        );
+}
+
+class BoolFieldObject extends FormFieldObject<bool, BoolInputFailure> {
+  BoolFieldObject.generate({
+    required bool value,
+    bool needsToBeTrue = false,
+  }) : super.generate(
+          validator: BoolValidator(
+            needsToBeTrue: needsToBeTrue,
+          ),
           value: value,
         );
 }
 
 class DateFieldObject extends FormFieldObject<DateTime?, DateTimeInputFailure> {
   DateFieldObject.generate({
-    required DateValidator validator,
     DateTime? value,
+    required bool isRequired,
   }) : super.generate(
-          validator: validator,
+          validator: DateValidator(
+            isRequired: isRequired,
+          ),
+          value: value,
+        );
+}
+
+class ImageFieldObject extends FormFieldObject<ImageType?, ImageInputFailure> {
+  ImageFieldObject.generate({
+    required ImageType? value,
+    required bool isRequired,
+  }) : super.generate(
+          validator: ImageValidator(
+            isRequired: isRequired,
+          ),
           value: value,
         );
 }
@@ -42,49 +106,9 @@ class StringFieldObject extends FormFieldObject<String, TextInputFailure> {
         );
 
   String? get valueAsNullIfEmpty => value == '' ? null : value;
-
-  StringFieldObject.username()
-      : super.generate(
-          validator: TextValidator.username(),
-          value: '',
-        );
-
-  StringFieldObject.email()
-      : super.generate(
-          validator: TextValidator.email(),
-          value: '',
-        );
-
-  StringFieldObject.password()
-      : super.generate(
-          validator: TextValidator.password(),
-          value: '',
-        );
-
-  StringFieldObject.firstName()
-      : super.generate(
-          validator: TextValidator.name(
-            nameDescription: 'First name',
-          ),
-          value: '',
-        );
-
-  StringFieldObject.lastName()
-      : super.generate(
-          validator: TextValidator.name(
-            nameDescription: 'Last name',
-          ),
-          value: '',
-        );
 }
 
 class FormFieldObject<V, F> {
-  FormFieldObject._(
-    this._validatorObject,
-    this._valueObject,
-    this.initialValue,
-  );
-
   FormFieldObject.generate({
     required CustomValidator<V, F> validator,
     required V value,
@@ -105,7 +129,7 @@ class FormFieldObject<V, F> {
 
   ValueObject<V, F> get valueObject => _valueObject;
 
-  ErrorMessageGenerator<V> get validator => _validatorObject.validator;
+  FailureGenerator<V, F> get validator => _validatorObject.validator;
 
   V get value => _valueObject.value;
 
@@ -155,7 +179,9 @@ class ValueObject<V, F> with _$ValueObject<V, F> {
     required V value,
     required F failure,
   }) = _Failure<V, F>;
+}
 
+extension ValueObjectX on ValueObject {
   bool get isValid => maybeMap(
         valid: (_) => true,
         orElse: () => false,
@@ -166,4 +192,3 @@ class ValueObject<V, F> with _$ValueObject<V, F> {
         orElse: () => false,
       );
 }
-

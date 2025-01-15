@@ -6,6 +6,7 @@ part 'form_field_state.freezed.dart';
 
 @freezed
 class CustomFormFieldState with _$CustomFormFieldState {
+  const CustomFormFieldState._();
   const factory CustomFormFieldState.initial({
     @Default('') String value,
     TextInputFailure? failure,

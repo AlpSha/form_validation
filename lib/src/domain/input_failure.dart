@@ -4,6 +4,7 @@ part 'input_failure.freezed.dart';
 
 @freezed
 class TextInputFailure with _$TextInputFailure {
+  const TextInputFailure._();
   const factory TextInputFailure.invalid() = _Invalid;
   const factory TextInputFailure.tooShort(int minChars) = _TooShort;
   const factory TextInputFailure.tooLong(int maxChars) = _TooLong;
@@ -13,12 +14,42 @@ class TextInputFailure with _$TextInputFailure {
 
 @freezed
 class DateTimeInputFailure with _$DateTimeInputFailure {
+  const DateTimeInputFailure._();
   const factory DateTimeInputFailure.empty() = _EmptyDate;
+  const factory DateTimeInputFailure.beforeMin(DateTime min) = _BeforeMin;
+  const factory DateTimeInputFailure.afterMax(DateTime max) = _AfterMax;
 }
 
 @freezed
-class NumberInputFailure with _$NumberInputFailure {
-  const factory NumberInputFailure.tooSmall(int min) = _TooSmall;
-  const factory NumberInputFailure.tooBig(int max) = _TooBig;
-  const factory NumberInputFailure.empty() = _EmptyNumber;
+class IntInputFailure with _$IntInputFailure {
+  const IntInputFailure._();
+  const factory IntInputFailure.tooSmall(int min) = _TooSmall;
+  const factory IntInputFailure.tooBig(int max) = _TooBig;
+  const factory IntInputFailure.empty() = _EmptyNumber;
+}
+
+@freezed
+class DoubleInputFailure with _$DoubleInputFailure {
+  const DoubleInputFailure._();
+  const factory DoubleInputFailure.tooSmall(double min) = _TooSmallDouble;
+  const factory DoubleInputFailure.tooBig(double max) = _TooBigDouble;
+  const factory DoubleInputFailure.empty() = _EmptyDouble;
+}
+
+@freezed
+class BoolInputFailure with _$BoolInputFailure {
+  const BoolInputFailure._();
+  const factory BoolInputFailure.isFalse() = _IsFalse;
+}
+
+@freezed
+class ImageInputFailure with _$ImageInputFailure {
+  const factory ImageInputFailure.invalidUrl() = _InvalidUrl;
+  const factory ImageInputFailure.fileNotExists() = _FileNotExists;
+  const factory ImageInputFailure.empty() = _EmptyImage;
+}
+
+@freezed
+class DropdownInputFailure with _$DropdownInputFailure {
+  const factory DropdownInputFailure.notSelected() = _NotSelected;
 }

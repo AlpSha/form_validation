@@ -12,10 +12,10 @@ part of 'form_notifier.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$CustomFormState<V extends FormFieldsMixin<dynamic>, F> {
+mixin _$CustomFormState<V extends FormFieldsMixin, F> {
   bool get isFormSent => throw _privateConstructorUsedError;
   bool get isFormValid => throw _privateConstructorUsedError;
   V get fields => throw _privateConstructorUsedError;
@@ -85,16 +85,13 @@ mixin _$CustomFormState<V extends FormFieldsMixin<dynamic>, F> {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CustomFormStateCopyWith<V, F, CustomFormState<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CustomFormStateCopyWith<V extends FormFieldsMixin<dynamic>, F,
-    $Res> {
+abstract class $CustomFormStateCopyWith<V extends FormFieldsMixin, F, $Res> {
   factory $CustomFormStateCopyWith(CustomFormState<V, F> value,
           $Res Function(CustomFormState<V, F>) then) =
       _$CustomFormStateCopyWithImpl<V, F, $Res, CustomFormState<V, F>>;
@@ -103,7 +100,7 @@ abstract class $CustomFormStateCopyWith<V extends FormFieldsMixin<dynamic>, F,
 }
 
 /// @nodoc
-class _$CustomFormStateCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res,
+class _$CustomFormStateCopyWithImpl<V extends FormFieldsMixin, F, $Res,
         $Val extends CustomFormState<V, F>>
     implements $CustomFormStateCopyWith<V, F, $Res> {
   _$CustomFormStateCopyWithImpl(this._value, this._then);
@@ -113,8 +110,6 @@ class _$CustomFormStateCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,26 +135,24 @@ class _$CustomFormStateCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res,
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<V extends FormFieldsMixin<dynamic>, F,
-    $Res> implements $CustomFormStateCopyWith<V, F, $Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl<V, F> value, $Res Function(_$InitialImpl<V, F>) then) =
-      __$$InitialImplCopyWithImpl<V, F, $Res>;
+abstract class _$$_InitialCopyWith<V extends FormFieldsMixin, F, $Res>
+    implements $CustomFormStateCopyWith<V, F, $Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial<V, F> value, $Res Function(_$_Initial<V, F>) then) =
+      __$$_InitialCopyWithImpl<V, F, $Res>;
   @override
   @useResult
   $Res call({bool isFormSent, bool isFormValid, V fields});
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
-    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$InitialImpl<V, F>>
-    implements _$$InitialImplCopyWith<V, F, $Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl<V, F> _value, $Res Function(_$InitialImpl<V, F>) _then)
+class __$$_InitialCopyWithImpl<V extends FormFieldsMixin, F, $Res>
+    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$_Initial<V, F>>
+    implements _$$_InitialCopyWith<V, F, $Res> {
+  __$$_InitialCopyWithImpl(
+      _$_Initial<V, F> _value, $Res Function(_$_Initial<V, F>) _then)
       : super(_value, _then);
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,7 +160,7 @@ class __$$InitialImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
     Object? isFormValid = null,
     Object? fields = null,
   }) {
-    return _then(_$InitialImpl<V, F>(
+    return _then(_$_Initial<V, F>(
       isFormSent: null == isFormSent
           ? _value.isFormSent
           : isFormSent // ignore: cast_nullable_to_non_nullable
@@ -186,12 +179,10 @@ class __$$InitialImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
 
 /// @nodoc
 
-class _$InitialImpl<V extends FormFieldsMixin<dynamic>, F>
-    implements _Initial<V, F> {
-  const _$InitialImpl(
-      {this.isFormSent = false,
-      this.isFormValid = false,
-      required this.fields});
+class _$_Initial<V extends FormFieldsMixin, F> extends _Initial<V, F> {
+  const _$_Initial(
+      {this.isFormSent = false, this.isFormValid = false, required this.fields})
+      : super._();
 
   @override
   @JsonKey()
@@ -208,10 +199,10 @@ class _$InitialImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InitialImpl<V, F> &&
+            other is _$_Initial<V, F> &&
             (identical(other.isFormSent, isFormSent) ||
                 other.isFormSent == isFormSent) &&
             (identical(other.isFormValid, isFormValid) ||
@@ -223,13 +214,11 @@ class _$InitialImpl<V extends FormFieldsMixin<dynamic>, F>
   int get hashCode => Object.hash(runtimeType, isFormSent, isFormValid,
       const DeepCollectionEquality().hash(fields));
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$InitialImplCopyWith<V, F, _$InitialImpl<V, F>> get copyWith =>
-      __$$InitialImplCopyWithImpl<V, F, _$InitialImpl<V, F>>(this, _$identity);
+  _$$_InitialCopyWith<V, F, _$_Initial<V, F>> get copyWith =>
+      __$$_InitialCopyWithImpl<V, F, _$_Initial<V, F>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -321,12 +310,13 @@ class _$InitialImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 }
 
-abstract class _Initial<V extends FormFieldsMixin<dynamic>, F>
-    implements CustomFormState<V, F> {
+abstract class _Initial<V extends FormFieldsMixin, F>
+    extends CustomFormState<V, F> {
   const factory _Initial(
       {final bool isFormSent,
       final bool isFormValid,
-      required final V fields}) = _$InitialImpl<V, F>;
+      required final V fields}) = _$_Initial<V, F>;
+  const _Initial._() : super._();
 
   @override
   bool get isFormSent;
@@ -334,37 +324,31 @@ abstract class _Initial<V extends FormFieldsMixin<dynamic>, F>
   bool get isFormValid;
   @override
   V get fields;
-
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InitialImplCopyWith<V, F, _$InitialImpl<V, F>> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_InitialCopyWith<V, F, _$_Initial<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$InProgressImplCopyWith<V extends FormFieldsMixin<dynamic>, F,
-    $Res> implements $CustomFormStateCopyWith<V, F, $Res> {
-  factory _$$InProgressImplCopyWith(_$InProgressImpl<V, F> value,
-          $Res Function(_$InProgressImpl<V, F>) then) =
-      __$$InProgressImplCopyWithImpl<V, F, $Res>;
+abstract class _$$_InProgressCopyWith<V extends FormFieldsMixin, F, $Res>
+    implements $CustomFormStateCopyWith<V, F, $Res> {
+  factory _$$_InProgressCopyWith(
+          _$_InProgress<V, F> value, $Res Function(_$_InProgress<V, F>) then) =
+      __$$_InProgressCopyWithImpl<V, F, $Res>;
   @override
   @useResult
   $Res call({bool isFormSent, bool isFormValid, V fields});
 }
 
 /// @nodoc
-class __$$InProgressImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F,
-        $Res>
-    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$InProgressImpl<V, F>>
-    implements _$$InProgressImplCopyWith<V, F, $Res> {
-  __$$InProgressImplCopyWithImpl(_$InProgressImpl<V, F> _value,
-      $Res Function(_$InProgressImpl<V, F>) _then)
+class __$$_InProgressCopyWithImpl<V extends FormFieldsMixin, F, $Res>
+    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$_InProgress<V, F>>
+    implements _$$_InProgressCopyWith<V, F, $Res> {
+  __$$_InProgressCopyWithImpl(
+      _$_InProgress<V, F> _value, $Res Function(_$_InProgress<V, F>) _then)
       : super(_value, _then);
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -372,7 +356,7 @@ class __$$InProgressImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F,
     Object? isFormValid = null,
     Object? fields = null,
   }) {
-    return _then(_$InProgressImpl<V, F>(
+    return _then(_$_InProgress<V, F>(
       isFormSent: null == isFormSent
           ? _value.isFormSent
           : isFormSent // ignore: cast_nullable_to_non_nullable
@@ -391,10 +375,10 @@ class __$$InProgressImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F,
 
 /// @nodoc
 
-class _$InProgressImpl<V extends FormFieldsMixin<dynamic>, F>
-    implements _InProgress<V, F> {
-  const _$InProgressImpl(
-      {this.isFormSent = true, this.isFormValid = true, required this.fields});
+class _$_InProgress<V extends FormFieldsMixin, F> extends _InProgress<V, F> {
+  const _$_InProgress(
+      {this.isFormSent = true, this.isFormValid = true, required this.fields})
+      : super._();
 
   @override
   @JsonKey()
@@ -411,10 +395,10 @@ class _$InProgressImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InProgressImpl<V, F> &&
+            other is _$_InProgress<V, F> &&
             (identical(other.isFormSent, isFormSent) ||
                 other.isFormSent == isFormSent) &&
             (identical(other.isFormValid, isFormValid) ||
@@ -426,14 +410,11 @@ class _$InProgressImpl<V extends FormFieldsMixin<dynamic>, F>
   int get hashCode => Object.hash(runtimeType, isFormSent, isFormValid,
       const DeepCollectionEquality().hash(fields));
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$InProgressImplCopyWith<V, F, _$InProgressImpl<V, F>> get copyWith =>
-      __$$InProgressImplCopyWithImpl<V, F, _$InProgressImpl<V, F>>(
-          this, _$identity);
+  _$$_InProgressCopyWith<V, F, _$_InProgress<V, F>> get copyWith =>
+      __$$_InProgressCopyWithImpl<V, F, _$_InProgress<V, F>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -525,12 +506,13 @@ class _$InProgressImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 }
 
-abstract class _InProgress<V extends FormFieldsMixin<dynamic>, F>
-    implements CustomFormState<V, F> {
+abstract class _InProgress<V extends FormFieldsMixin, F>
+    extends CustomFormState<V, F> {
   const factory _InProgress(
       {final bool isFormSent,
       final bool isFormValid,
-      required final V fields}) = _$InProgressImpl<V, F>;
+      required final V fields}) = _$_InProgress<V, F>;
+  const _InProgress._() : super._();
 
   @override
   bool get isFormSent;
@@ -538,37 +520,31 @@ abstract class _InProgress<V extends FormFieldsMixin<dynamic>, F>
   bool get isFormValid;
   @override
   V get fields;
-
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InProgressImplCopyWith<V, F, _$InProgressImpl<V, F>> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_InProgressCopyWith<V, F, _$_InProgress<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FormIsEditedImplCopyWith<V extends FormFieldsMixin<dynamic>,
-    F, $Res> implements $CustomFormStateCopyWith<V, F, $Res> {
-  factory _$$FormIsEditedImplCopyWith(_$FormIsEditedImpl<V, F> value,
-          $Res Function(_$FormIsEditedImpl<V, F>) then) =
-      __$$FormIsEditedImplCopyWithImpl<V, F, $Res>;
+abstract class _$$_FormIsEditedCopyWith<V extends FormFieldsMixin, F, $Res>
+    implements $CustomFormStateCopyWith<V, F, $Res> {
+  factory _$$_FormIsEditedCopyWith(_$_FormIsEdited<V, F> value,
+          $Res Function(_$_FormIsEdited<V, F>) then) =
+      __$$_FormIsEditedCopyWithImpl<V, F, $Res>;
   @override
   @useResult
   $Res call({bool isFormSent, bool isFormValid, V fields});
 }
 
 /// @nodoc
-class __$$FormIsEditedImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F,
-        $Res>
-    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$FormIsEditedImpl<V, F>>
-    implements _$$FormIsEditedImplCopyWith<V, F, $Res> {
-  __$$FormIsEditedImplCopyWithImpl(_$FormIsEditedImpl<V, F> _value,
-      $Res Function(_$FormIsEditedImpl<V, F>) _then)
+class __$$_FormIsEditedCopyWithImpl<V extends FormFieldsMixin, F, $Res>
+    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$_FormIsEdited<V, F>>
+    implements _$$_FormIsEditedCopyWith<V, F, $Res> {
+  __$$_FormIsEditedCopyWithImpl(
+      _$_FormIsEdited<V, F> _value, $Res Function(_$_FormIsEdited<V, F>) _then)
       : super(_value, _then);
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -576,7 +552,7 @@ class __$$FormIsEditedImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F,
     Object? isFormValid = null,
     Object? fields = null,
   }) {
-    return _then(_$FormIsEditedImpl<V, F>(
+    return _then(_$_FormIsEdited<V, F>(
       isFormSent: null == isFormSent
           ? _value.isFormSent
           : isFormSent // ignore: cast_nullable_to_non_nullable
@@ -595,12 +571,13 @@ class __$$FormIsEditedImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F,
 
 /// @nodoc
 
-class _$FormIsEditedImpl<V extends FormFieldsMixin<dynamic>, F>
-    implements _FormIsEdited<V, F> {
-  const _$FormIsEditedImpl(
+class _$_FormIsEdited<V extends FormFieldsMixin, F>
+    extends _FormIsEdited<V, F> {
+  const _$_FormIsEdited(
       {required this.isFormSent,
       required this.isFormValid,
-      required this.fields});
+      required this.fields})
+      : super._();
 
   @override
   final bool isFormSent;
@@ -615,10 +592,10 @@ class _$FormIsEditedImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FormIsEditedImpl<V, F> &&
+            other is _$_FormIsEdited<V, F> &&
             (identical(other.isFormSent, isFormSent) ||
                 other.isFormSent == isFormSent) &&
             (identical(other.isFormValid, isFormValid) ||
@@ -630,13 +607,11 @@ class _$FormIsEditedImpl<V extends FormFieldsMixin<dynamic>, F>
   int get hashCode => Object.hash(runtimeType, isFormSent, isFormValid,
       const DeepCollectionEquality().hash(fields));
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FormIsEditedImplCopyWith<V, F, _$FormIsEditedImpl<V, F>> get copyWith =>
-      __$$FormIsEditedImplCopyWithImpl<V, F, _$FormIsEditedImpl<V, F>>(
+  _$$_FormIsEditedCopyWith<V, F, _$_FormIsEdited<V, F>> get copyWith =>
+      __$$_FormIsEditedCopyWithImpl<V, F, _$_FormIsEdited<V, F>>(
           this, _$identity);
 
   @override
@@ -729,12 +704,13 @@ class _$FormIsEditedImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 }
 
-abstract class _FormIsEdited<V extends FormFieldsMixin<dynamic>, F>
-    implements CustomFormState<V, F> {
+abstract class _FormIsEdited<V extends FormFieldsMixin, F>
+    extends CustomFormState<V, F> {
   const factory _FormIsEdited(
       {required final bool isFormSent,
       required final bool isFormValid,
-      required final V fields}) = _$FormIsEditedImpl<V, F>;
+      required final V fields}) = _$_FormIsEdited<V, F>;
+  const _FormIsEdited._() : super._();
 
   @override
   bool get isFormSent;
@@ -742,36 +718,31 @@ abstract class _FormIsEdited<V extends FormFieldsMixin<dynamic>, F>
   bool get isFormValid;
   @override
   V get fields;
-
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FormIsEditedImplCopyWith<V, F, _$FormIsEditedImpl<V, F>> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_FormIsEditedCopyWith<V, F, _$_FormIsEdited<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FailureImplCopyWith<V extends FormFieldsMixin<dynamic>, F,
-    $Res> implements $CustomFormStateCopyWith<V, F, $Res> {
-  factory _$$FailureImplCopyWith(
-          _$FailureImpl<V, F> value, $Res Function(_$FailureImpl<V, F>) then) =
-      __$$FailureImplCopyWithImpl<V, F, $Res>;
+abstract class _$$_FailureCopyWith<V extends FormFieldsMixin, F, $Res>
+    implements $CustomFormStateCopyWith<V, F, $Res> {
+  factory _$$_FailureCopyWith(
+          _$_Failure<V, F> value, $Res Function(_$_Failure<V, F>) then) =
+      __$$_FailureCopyWithImpl<V, F, $Res>;
   @override
   @useResult
   $Res call({F failure, bool isFormSent, bool isFormValid, V fields});
 }
 
 /// @nodoc
-class __$$FailureImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
-    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$FailureImpl<V, F>>
-    implements _$$FailureImplCopyWith<V, F, $Res> {
-  __$$FailureImplCopyWithImpl(
-      _$FailureImpl<V, F> _value, $Res Function(_$FailureImpl<V, F>) _then)
+class __$$_FailureCopyWithImpl<V extends FormFieldsMixin, F, $Res>
+    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$_Failure<V, F>>
+    implements _$$_FailureCopyWith<V, F, $Res> {
+  __$$_FailureCopyWithImpl(
+      _$_Failure<V, F> _value, $Res Function(_$_Failure<V, F>) _then)
       : super(_value, _then);
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -780,7 +751,7 @@ class __$$FailureImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
     Object? isFormValid = null,
     Object? fields = null,
   }) {
-    return _then(_$FailureImpl<V, F>(
+    return _then(_$_Failure<V, F>(
       freezed == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -803,10 +774,10 @@ class __$$FailureImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
 
 /// @nodoc
 
-class _$FailureImpl<V extends FormFieldsMixin<dynamic>, F>
-    implements _Failure<V, F> {
-  const _$FailureImpl(this.failure,
-      {this.isFormSent = true, this.isFormValid = true, required this.fields});
+class _$_Failure<V extends FormFieldsMixin, F> extends _Failure<V, F> {
+  const _$_Failure(this.failure,
+      {this.isFormSent = true, this.isFormValid = true, required this.fields})
+      : super._();
 
   @override
   final F failure;
@@ -825,10 +796,10 @@ class _$FailureImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FailureImpl<V, F> &&
+            other is _$_Failure<V, F> &&
             const DeepCollectionEquality().equals(other.failure, failure) &&
             (identical(other.isFormSent, isFormSent) ||
                 other.isFormSent == isFormSent) &&
@@ -845,13 +816,11 @@ class _$FailureImpl<V extends FormFieldsMixin<dynamic>, F>
       isFormValid,
       const DeepCollectionEquality().hash(fields));
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FailureImplCopyWith<V, F, _$FailureImpl<V, F>> get copyWith =>
-      __$$FailureImplCopyWithImpl<V, F, _$FailureImpl<V, F>>(this, _$identity);
+  _$$_FailureCopyWith<V, F, _$_Failure<V, F>> get copyWith =>
+      __$$_FailureCopyWithImpl<V, F, _$_Failure<V, F>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -943,12 +912,13 @@ class _$FailureImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 }
 
-abstract class _Failure<V extends FormFieldsMixin<dynamic>, F>
-    implements CustomFormState<V, F> {
+abstract class _Failure<V extends FormFieldsMixin, F>
+    extends CustomFormState<V, F> {
   const factory _Failure(final F failure,
       {final bool isFormSent,
       final bool isFormValid,
-      required final V fields}) = _$FailureImpl<V, F>;
+      required final V fields}) = _$_Failure<V, F>;
+  const _Failure._() : super._();
 
   F get failure;
   @override
@@ -957,36 +927,31 @@ abstract class _Failure<V extends FormFieldsMixin<dynamic>, F>
   bool get isFormValid;
   @override
   V get fields;
-
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FailureImplCopyWith<V, F, _$FailureImpl<V, F>> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_FailureCopyWith<V, F, _$_Failure<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<V extends FormFieldsMixin<dynamic>, F,
-    $Res> implements $CustomFormStateCopyWith<V, F, $Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl<V, F> value, $Res Function(_$SuccessImpl<V, F>) then) =
-      __$$SuccessImplCopyWithImpl<V, F, $Res>;
+abstract class _$$_SuccessCopyWith<V extends FormFieldsMixin, F, $Res>
+    implements $CustomFormStateCopyWith<V, F, $Res> {
+  factory _$$_SuccessCopyWith(
+          _$_Success<V, F> value, $Res Function(_$_Success<V, F>) then) =
+      __$$_SuccessCopyWithImpl<V, F, $Res>;
   @override
   @useResult
   $Res call({bool isFormSent, bool isFormValid, V fields});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
-    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$SuccessImpl<V, F>>
-    implements _$$SuccessImplCopyWith<V, F, $Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl<V, F> _value, $Res Function(_$SuccessImpl<V, F>) _then)
+class __$$_SuccessCopyWithImpl<V extends FormFieldsMixin, F, $Res>
+    extends _$CustomFormStateCopyWithImpl<V, F, $Res, _$_Success<V, F>>
+    implements _$$_SuccessCopyWith<V, F, $Res> {
+  __$$_SuccessCopyWithImpl(
+      _$_Success<V, F> _value, $Res Function(_$_Success<V, F>) _then)
       : super(_value, _then);
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -994,7 +959,7 @@ class __$$SuccessImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
     Object? isFormValid = null,
     Object? fields = null,
   }) {
-    return _then(_$SuccessImpl<V, F>(
+    return _then(_$_Success<V, F>(
       isFormSent: null == isFormSent
           ? _value.isFormSent
           : isFormSent // ignore: cast_nullable_to_non_nullable
@@ -1013,10 +978,10 @@ class __$$SuccessImplCopyWithImpl<V extends FormFieldsMixin<dynamic>, F, $Res>
 
 /// @nodoc
 
-class _$SuccessImpl<V extends FormFieldsMixin<dynamic>, F>
-    implements _Success<V, F> {
-  const _$SuccessImpl(
-      {this.isFormSent = true, this.isFormValid = true, required this.fields});
+class _$_Success<V extends FormFieldsMixin, F> extends _Success<V, F> {
+  const _$_Success(
+      {this.isFormSent = true, this.isFormValid = true, required this.fields})
+      : super._();
 
   @override
   @JsonKey()
@@ -1033,10 +998,10 @@ class _$SuccessImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl<V, F> &&
+            other is _$_Success<V, F> &&
             (identical(other.isFormSent, isFormSent) ||
                 other.isFormSent == isFormSent) &&
             (identical(other.isFormValid, isFormValid) ||
@@ -1048,13 +1013,11 @@ class _$SuccessImpl<V extends FormFieldsMixin<dynamic>, F>
   int get hashCode => Object.hash(runtimeType, isFormSent, isFormValid,
       const DeepCollectionEquality().hash(fields));
 
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<V, F, _$SuccessImpl<V, F>> get copyWith =>
-      __$$SuccessImplCopyWithImpl<V, F, _$SuccessImpl<V, F>>(this, _$identity);
+  _$$_SuccessCopyWith<V, F, _$_Success<V, F>> get copyWith =>
+      __$$_SuccessCopyWithImpl<V, F, _$_Success<V, F>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1146,12 +1109,13 @@ class _$SuccessImpl<V extends FormFieldsMixin<dynamic>, F>
   }
 }
 
-abstract class _Success<V extends FormFieldsMixin<dynamic>, F>
-    implements CustomFormState<V, F> {
+abstract class _Success<V extends FormFieldsMixin, F>
+    extends CustomFormState<V, F> {
   const factory _Success(
       {final bool isFormSent,
       final bool isFormValid,
-      required final V fields}) = _$SuccessImpl<V, F>;
+      required final V fields}) = _$_Success<V, F>;
+  const _Success._() : super._();
 
   @override
   bool get isFormSent;
@@ -1159,11 +1123,8 @@ abstract class _Success<V extends FormFieldsMixin<dynamic>, F>
   bool get isFormValid;
   @override
   V get fields;
-
-  /// Create a copy of CustomFormState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<V, F, _$SuccessImpl<V, F>> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_SuccessCopyWith<V, F, _$_Success<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }

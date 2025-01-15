@@ -12,7 +12,7 @@ part of 'form_field_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CustomFormFieldState {
@@ -57,9 +57,7 @@ mixin _$CustomFormFieldState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CustomFormFieldStateCopyWith<CustomFormFieldState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -86,8 +84,6 @@ class _$CustomFormFieldStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,8 +102,6 @@ class _$CustomFormFieldStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TextInputFailureCopyWith<$Res>? get failure {
@@ -122,11 +116,11 @@ class _$CustomFormFieldStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res>
+abstract class _$$_InitialCopyWith<$Res>
     implements $CustomFormFieldStateCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String value, TextInputFailure? failure});
@@ -136,22 +130,19 @@ abstract class _$$InitialImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$CustomFormFieldStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$CustomFormFieldStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
 
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
     Object? failure = freezed,
   }) {
-    return _then(_$InitialImpl(
+    return _then(_$_Initial(
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -166,8 +157,8 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl({this.value = '', this.failure});
+class _$_Initial extends _Initial {
+  const _$_Initial({this.value = '', this.failure}) : super._();
 
   @override
   @JsonKey()
@@ -181,10 +172,10 @@ class _$InitialImpl implements _Initial {
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InitialImpl &&
+            other is _$_Initial &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.failure, failure) || other.failure == failure));
   }
@@ -192,13 +183,11 @@ class _$InitialImpl implements _Initial {
   @override
   int get hashCode => Object.hash(runtimeType, value, failure);
 
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
-      __$$InitialImplCopyWithImpl<_$InitialImpl>(this, _$identity);
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
+      __$$_InitialCopyWithImpl<_$_Initial>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -263,29 +252,27 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements CustomFormFieldState {
+abstract class _Initial extends CustomFormFieldState {
   const factory _Initial(
-      {final String value, final TextInputFailure? failure}) = _$InitialImpl;
+      {final String value, final TextInputFailure? failure}) = _$_Initial;
+  const _Initial._() : super._();
 
   @override
   String get value;
   @override
   TextInputFailure? get failure;
-
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ChangedImplCopyWith<$Res>
+abstract class _$$_ChangedCopyWith<$Res>
     implements $CustomFormFieldStateCopyWith<$Res> {
-  factory _$$ChangedImplCopyWith(
-          _$ChangedImpl value, $Res Function(_$ChangedImpl) then) =
-      __$$ChangedImplCopyWithImpl<$Res>;
+  factory _$$_ChangedCopyWith(
+          _$_Changed value, $Res Function(_$_Changed) then) =
+      __$$_ChangedCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String value, TextInputFailure? failure});
@@ -295,22 +282,19 @@ abstract class _$$ChangedImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ChangedImplCopyWithImpl<$Res>
-    extends _$CustomFormFieldStateCopyWithImpl<$Res, _$ChangedImpl>
-    implements _$$ChangedImplCopyWith<$Res> {
-  __$$ChangedImplCopyWithImpl(
-      _$ChangedImpl _value, $Res Function(_$ChangedImpl) _then)
+class __$$_ChangedCopyWithImpl<$Res>
+    extends _$CustomFormFieldStateCopyWithImpl<$Res, _$_Changed>
+    implements _$$_ChangedCopyWith<$Res> {
+  __$$_ChangedCopyWithImpl(_$_Changed _value, $Res Function(_$_Changed) _then)
       : super(_value, _then);
 
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
     Object? failure = freezed,
   }) {
-    return _then(_$ChangedImpl(
+    return _then(_$_Changed(
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -325,8 +309,8 @@ class __$$ChangedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ChangedImpl implements _Changed {
-  const _$ChangedImpl({required this.value, required this.failure});
+class _$_Changed extends _Changed {
+  const _$_Changed({required this.value, required this.failure}) : super._();
 
   @override
   final String value;
@@ -339,10 +323,10 @@ class _$ChangedImpl implements _Changed {
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChangedImpl &&
+            other is _$_Changed &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.failure, failure) || other.failure == failure));
   }
@@ -350,13 +334,11 @@ class _$ChangedImpl implements _Changed {
   @override
   int get hashCode => Object.hash(runtimeType, value, failure);
 
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangedImplCopyWith<_$ChangedImpl> get copyWith =>
-      __$$ChangedImplCopyWithImpl<_$ChangedImpl>(this, _$identity);
+  _$$_ChangedCopyWith<_$_Changed> get copyWith =>
+      __$$_ChangedCopyWithImpl<_$_Changed>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -421,20 +403,18 @@ class _$ChangedImpl implements _Changed {
   }
 }
 
-abstract class _Changed implements CustomFormFieldState {
+abstract class _Changed extends CustomFormFieldState {
   const factory _Changed(
       {required final String value,
-      required final TextInputFailure? failure}) = _$ChangedImpl;
+      required final TextInputFailure? failure}) = _$_Changed;
+  const _Changed._() : super._();
 
   @override
   String get value;
   @override
   TextInputFailure? get failure;
-
-  /// Create a copy of CustomFormFieldState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChangedImplCopyWith<_$ChangedImpl> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_ChangedCopyWith<_$_Changed> get copyWith =>
       throw _privateConstructorUsedError;
 }

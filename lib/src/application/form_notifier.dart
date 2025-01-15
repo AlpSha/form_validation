@@ -6,7 +6,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'form_notifier.freezed.dart';
 
 @freezed
-class CustomFormState<V extends FormFieldsMixin, F> with _$CustomFormState<V, F> {
+class CustomFormState<V extends FormFieldsMixin, F>
+    with _$CustomFormState<V, F> {
+  const CustomFormState._();
   const factory CustomFormState.initial({
     @Default(false) bool isFormSent,
     @Default(false) bool isFormValid,
@@ -23,11 +25,11 @@ class CustomFormState<V extends FormFieldsMixin, F> with _$CustomFormState<V, F>
     required V fields,
   }) = _FormIsEdited<V, F>;
   const factory CustomFormState.failure(
-      F failure, {
-        @Default(true) bool isFormSent,
-        @Default(true) bool isFormValid,
-        required V fields,
-      }) = _Failure<V, F>;
+    F failure, {
+    @Default(true) bool isFormSent,
+    @Default(true) bool isFormValid,
+    required V fields,
+  }) = _Failure<V, F>;
   const factory CustomFormState.success({
     @Default(true) bool isFormSent,
     @Default(true) bool isFormValid,
@@ -35,15 +37,21 @@ class CustomFormState<V extends FormFieldsMixin, F> with _$CustomFormState<V, F>
   }) = _Success<V, F>;
 }
 
-abstract class FormNotifier<V extends FormFieldsMixin, F> extends StateNotifier<CustomFormState<V, F>> with FormMixin {
-  FormNotifier(this.fieldsGenerator, {bool isFormValidInitially = false})
+abstract class FormNotifier<V extends FormFieldsMixin, F>
+    extends StateNotifier<CustomFormState<V, F>> with FormMixin {
+  FormNotifier(this.fieldsGenerator)
       : super(
-    CustomFormState<V, F>.initial(
-      fields: fieldsGenerator(),
-      isFormValid: isFormValidInitially,
-    ),
-  ) {
+          CustomFormState<V, F>.initial(
+            fields: fieldsGenerator(),
+            isFormValid: false,
+          ),
+        ) {
     _setOwnerOfFields();
+    if (checkValidation()) {
+      state = state.copyWith(
+        isFormValid: true,
+      );
+    }
   }
 
   final formKey = GlobalKey<FormState>();
@@ -81,7 +89,7 @@ abstract class FormNotifier<V extends FormFieldsMixin, F> extends StateNotifier<
   }
 }
 
-mixin FormFieldsMixin<V> {
+mixin FormFieldsMixin {
   List<FormFieldObject> get fieldsList;
 
   Iterator<FormFieldObject> createIterator() {

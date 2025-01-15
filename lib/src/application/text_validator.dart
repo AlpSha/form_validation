@@ -11,12 +11,12 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
     this.maxLength,
     this.minLength,
     this.regex,
-    required OnFailureCallback<TextInputFailure> onFailure,
-    bool isRequired = true,
-  }) : super(onFailure: onFailure, isRequired: isRequired);
+    required super.isRequired,
+  }) : super();
 
   @override
-  ValidationResult<String, TextInputFailure> validateAndGetResult(String? value) {
+  ValidationResult<String, TextInputFailure> validateAndGetResult(
+      String? value) {
     if (value == null || value == '') {
       if (isRequired) {
         return const ValidationResult.failure(
@@ -44,13 +44,9 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
 
   factory TextValidator.password() {
     return TextValidator(
-      onFailure: (_) => _.maybeMap(
-        empty: (_) => 'Password is required',
-        invalid: (_) => 'Password is weak',
-        tooShort: (_) => 'Password is too short',
-        orElse: () => null,
-      ),
-      minLength: 6,
+      minLength: 8,
+      isRequired: true,
+      regex: r'^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).*$',
     );
   }
 
@@ -58,31 +54,18 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
     bool isRequired = true,
   }) {
     return TextValidator(
-      onFailure: (_) => _.maybeMap(
-        empty: (_) => isRequired ? 'Email address is required' : null,
-        invalid: (_) => 'Enter a valid email address',
-        notUnique: (_) => 'Belongs to another user',
-        orElse: () => null,
-      ),
       isRequired: isRequired,
       regex: emailRegex,
     );
   }
 
   factory TextValidator.name({
-    String nameDescription = 'Name',
     bool isRequired = true,
     int minLength = minNameLength,
     int? maxLength,
     String? regex,
   }) {
     return TextValidator(
-      onFailure: (_) => _.maybeMap(
-        empty: (_) => isRequired ? '$nameDescription is required' : null,
-        invalid: (_) => 'Enter a valid ${nameDescription.toLowerCase()}',
-        tooShort: (_) => '$nameDescription must be at least ${_.minChars} characters',
-        orElse: () => null,
-      ),
       minLength: minLength,
       maxLength: maxLength,
       isRequired: isRequired,
@@ -92,16 +75,10 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
 
   factory TextValidator.username() {
     return TextValidator(
-      onFailure: (_) => _.map(
-        empty: (_) => 'Username is required',
-        invalid: (_) => 'Invalid username',
-        notUnique: (_) => 'Username already in use',
-        tooLong: (_) => 'Username cant be longer than ${_.maxChars} chars',
-        tooShort: (_) => 'Username should be at least ${_.minChars} chars',
-      ),
       maxLength: maxUsernameLength,
       minLength: minUsernameLength,
       regex: usernameRegex,
+      isRequired: true,
     );
   }
 }

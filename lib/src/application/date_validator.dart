@@ -4,28 +4,34 @@ import 'custom_validator.dart';
 
 class DateValidator extends CustomValidator<DateTime, DateTimeInputFailure> {
   DateValidator({
-    required OnFailureCallback<DateTimeInputFailure> onFailure,
-    bool isRequired = true,
-  }) : super(
-          onFailure: onFailure,
-          isRequired: isRequired,
-        );
+    required super.isRequired,
+    this.minDate,
+    this.maxDate,
+  }) : super();
+
+  final DateTime? minDate;
+  final DateTime? maxDate;
 
   @override
-  ValidationResult<DateTime, DateTimeInputFailure> validateAndGetResult(DateTime? value) {
+  ValidationResult<DateTime, DateTimeInputFailure> validateAndGetResult(
+      DateTime? value) {
     if (value == null) {
       return const ValidationResult.failure(
         DateTimeInputFailure.empty(),
       );
     }
+    final minDate = this.minDate;
+    if (minDate != null && value.isBefore(minDate)) {
+      return ValidationResult.failure(
+        DateTimeInputFailure.beforeMin(minDate),
+      );
+    }
+    final maxDate = this.maxDate;
+    if (maxDate != null && value.isAfter(maxDate)) {
+      return ValidationResult.failure(
+        DateTimeInputFailure.afterMax(maxDate),
+      );
+    }
     return ValidationResult.success(value);
-  }
-
-  factory DateValidator.dateOfBirth() {
-    return DateValidator(
-      onFailure: (_) => _.map(
-        empty: (_) => 'Date is required',
-      ),
-    );
   }
 }

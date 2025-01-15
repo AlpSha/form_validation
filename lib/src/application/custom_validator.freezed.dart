@@ -12,7 +12,7 @@ part of 'custom_validator.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ValidationResult<V, F> {
@@ -73,36 +73,31 @@ class _$ValidationResultCopyWithImpl<V, F, $Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ValidationResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<V, F, $Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl<V, F> value, $Res Function(_$SuccessImpl<V, F>) then) =
-      __$$SuccessImplCopyWithImpl<V, F, $Res>;
+abstract class _$$_SuccessCopyWith<V, F, $Res> {
+  factory _$$_SuccessCopyWith(
+          _$_Success<V, F> value, $Res Function(_$_Success<V, F>) then) =
+      __$$_SuccessCopyWithImpl<V, F, $Res>;
   @useResult
   $Res call({V value});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<V, F, $Res>
-    extends _$ValidationResultCopyWithImpl<V, F, $Res, _$SuccessImpl<V, F>>
-    implements _$$SuccessImplCopyWith<V, F, $Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl<V, F> _value, $Res Function(_$SuccessImpl<V, F>) _then)
+class __$$_SuccessCopyWithImpl<V, F, $Res>
+    extends _$ValidationResultCopyWithImpl<V, F, $Res, _$_Success<V, F>>
+    implements _$$_SuccessCopyWith<V, F, $Res> {
+  __$$_SuccessCopyWithImpl(
+      _$_Success<V, F> _value, $Res Function(_$_Success<V, F>) _then)
       : super(_value, _then);
 
-  /// Create a copy of ValidationResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = freezed,
   }) {
-    return _then(_$SuccessImpl<V, F>(
+    return _then(_$_Success<V, F>(
       freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -113,8 +108,8 @@ class __$$SuccessImplCopyWithImpl<V, F, $Res>
 
 /// @nodoc
 
-class _$SuccessImpl<V, F> implements _Success<V, F> {
-  const _$SuccessImpl(this.value);
+class _$_Success<V, F> extends _Success<V, F> {
+  const _$_Success(this.value) : super._();
 
   @override
   final V value;
@@ -125,10 +120,10 @@ class _$SuccessImpl<V, F> implements _Success<V, F> {
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl<V, F> &&
+            other is _$_Success<V, F> &&
             const DeepCollectionEquality().equals(other.value, value));
   }
 
@@ -136,13 +131,11 @@ class _$SuccessImpl<V, F> implements _Success<V, F> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
 
-  /// Create a copy of ValidationResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<V, F, _$SuccessImpl<V, F>> get copyWith =>
-      __$$SuccessImplCopyWithImpl<V, F, _$SuccessImpl<V, F>>(this, _$identity);
+  _$$_SuccessCopyWith<V, F, _$_Success<V, F>> get copyWith =>
+      __$$_SuccessCopyWithImpl<V, F, _$_Success<V, F>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -207,43 +200,39 @@ class _$SuccessImpl<V, F> implements _Success<V, F> {
   }
 }
 
-abstract class _Success<V, F> implements ValidationResult<V, F> {
-  const factory _Success(final V value) = _$SuccessImpl<V, F>;
+abstract class _Success<V, F> extends ValidationResult<V, F> {
+  const factory _Success(final V value) = _$_Success<V, F>;
+  const _Success._() : super._();
 
   V get value;
-
-  /// Create a copy of ValidationResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<V, F, _$SuccessImpl<V, F>> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_SuccessCopyWith<V, F, _$_Success<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FailureImplCopyWith<V, F, $Res> {
-  factory _$$FailureImplCopyWith(
-          _$FailureImpl<V, F> value, $Res Function(_$FailureImpl<V, F>) then) =
-      __$$FailureImplCopyWithImpl<V, F, $Res>;
+abstract class _$$_FailureCopyWith<V, F, $Res> {
+  factory _$$_FailureCopyWith(
+          _$_Failure<V, F> value, $Res Function(_$_Failure<V, F>) then) =
+      __$$_FailureCopyWithImpl<V, F, $Res>;
   @useResult
   $Res call({F failure});
 }
 
 /// @nodoc
-class __$$FailureImplCopyWithImpl<V, F, $Res>
-    extends _$ValidationResultCopyWithImpl<V, F, $Res, _$FailureImpl<V, F>>
-    implements _$$FailureImplCopyWith<V, F, $Res> {
-  __$$FailureImplCopyWithImpl(
-      _$FailureImpl<V, F> _value, $Res Function(_$FailureImpl<V, F>) _then)
+class __$$_FailureCopyWithImpl<V, F, $Res>
+    extends _$ValidationResultCopyWithImpl<V, F, $Res, _$_Failure<V, F>>
+    implements _$$_FailureCopyWith<V, F, $Res> {
+  __$$_FailureCopyWithImpl(
+      _$_Failure<V, F> _value, $Res Function(_$_Failure<V, F>) _then)
       : super(_value, _then);
 
-  /// Create a copy of ValidationResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failure = freezed,
   }) {
-    return _then(_$FailureImpl<V, F>(
+    return _then(_$_Failure<V, F>(
       freezed == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -254,8 +243,8 @@ class __$$FailureImplCopyWithImpl<V, F, $Res>
 
 /// @nodoc
 
-class _$FailureImpl<V, F> implements _Failure<V, F> {
-  const _$FailureImpl(this.failure);
+class _$_Failure<V, F> extends _Failure<V, F> {
+  const _$_Failure(this.failure) : super._();
 
   @override
   final F failure;
@@ -266,10 +255,10 @@ class _$FailureImpl<V, F> implements _Failure<V, F> {
   }
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FailureImpl<V, F> &&
+            other is _$_Failure<V, F> &&
             const DeepCollectionEquality().equals(other.failure, failure));
   }
 
@@ -277,13 +266,11 @@ class _$FailureImpl<V, F> implements _Failure<V, F> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(failure));
 
-  /// Create a copy of ValidationResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FailureImplCopyWith<V, F, _$FailureImpl<V, F>> get copyWith =>
-      __$$FailureImplCopyWithImpl<V, F, _$FailureImpl<V, F>>(this, _$identity);
+  _$$_FailureCopyWith<V, F, _$_Failure<V, F>> get copyWith =>
+      __$$_FailureCopyWithImpl<V, F, _$_Failure<V, F>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -348,14 +335,12 @@ class _$FailureImpl<V, F> implements _Failure<V, F> {
   }
 }
 
-abstract class _Failure<V, F> implements ValidationResult<V, F> {
-  const factory _Failure(final F failure) = _$FailureImpl<V, F>;
+abstract class _Failure<V, F> extends ValidationResult<V, F> {
+  const factory _Failure(final F failure) = _$_Failure<V, F>;
+  const _Failure._() : super._();
 
   F get failure;
-
-  /// Create a copy of ValidationResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FailureImplCopyWith<V, F, _$FailureImpl<V, F>> get copyWith =>
+  @JsonKey(ignore: true)
+  _$$_FailureCopyWith<V, F, _$_Failure<V, F>> get copyWith =>
       throw _privateConstructorUsedError;
 }
