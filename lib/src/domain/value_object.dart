@@ -4,6 +4,7 @@ import 'package:form_handling/src/application/date_validator.dart';
 import 'package:form_handling/src/application/dropdown_validator.dart';
 import 'package:form_handling/src/application/form_notifier.dart';
 import 'package:form_handling/src/application/image_validator.dart';
+import 'package:form_handling/src/application/multiselect_validator.dart';
 import 'package:form_handling/src/application/number_validator.dart';
 import 'package:form_handling/src/application/text_validator.dart';
 import 'package:form_handling/src/domain/image_type.dart';
@@ -106,6 +107,22 @@ class StringFieldObject extends FormFieldObject<String, TextInputFailure> {
         );
 
   String? get valueAsNullIfEmpty => value == '' ? null : value;
+}
+
+class MultiSelectFieldObject extends FormFieldObject<List<String>, MultiselectInputFailure> {
+  MultiSelectFieldObject.generate({
+    required List<String> value,
+    required bool isRequired,
+    int? minToSelect,
+    int? maxToSelect,
+  }) : super.generate(
+          validator: MultiSelectValidator(
+            isRequired: isRequired,
+            minToSelect: minToSelect,
+            maxToSelect: maxToSelect,
+          ),
+          value: value,
+        );
 }
 
 class FormFieldObject<V, F> {
