@@ -12,7 +12,7 @@ part of 'input_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TextInputFailure {
@@ -90,27 +90,34 @@ class _$TextInputFailureCopyWithImpl<$Res, $Val extends TextInputFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_InvalidCopyWith<$Res> {
-  factory _$$_InvalidCopyWith(
-          _$_Invalid value, $Res Function(_$_Invalid) then) =
-      __$$_InvalidCopyWithImpl<$Res>;
+abstract class _$$InvalidImplCopyWith<$Res> {
+  factory _$$InvalidImplCopyWith(
+          _$InvalidImpl value, $Res Function(_$InvalidImpl) then) =
+      __$$InvalidImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InvalidCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res, _$_Invalid>
-    implements _$$_InvalidCopyWith<$Res> {
-  __$$_InvalidCopyWithImpl(_$_Invalid _value, $Res Function(_$_Invalid) _then)
+class __$$InvalidImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$InvalidImpl>
+    implements _$$InvalidImplCopyWith<$Res> {
+  __$$InvalidImplCopyWithImpl(
+      _$InvalidImpl _value, $Res Function(_$InvalidImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_Invalid extends _Invalid {
-  const _$_Invalid() : super._();
+class _$InvalidImpl extends _Invalid {
+  const _$InvalidImpl() : super._();
 
   @override
   String toString() {
@@ -118,9 +125,9 @@ class _$_Invalid extends _Invalid {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Invalid);
+        (other.runtimeType == runtimeType && other is _$InvalidImpl);
   }
 
   @override
@@ -208,33 +215,35 @@ class _$_Invalid extends _Invalid {
 }
 
 abstract class _Invalid extends TextInputFailure {
-  const factory _Invalid() = _$_Invalid;
+  const factory _Invalid() = _$InvalidImpl;
   const _Invalid._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_TooShortCopyWith<$Res> {
-  factory _$$_TooShortCopyWith(
-          _$_TooShort value, $Res Function(_$_TooShort) then) =
-      __$$_TooShortCopyWithImpl<$Res>;
+abstract class _$$TooShortImplCopyWith<$Res> {
+  factory _$$TooShortImplCopyWith(
+          _$TooShortImpl value, $Res Function(_$TooShortImpl) then) =
+      __$$TooShortImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int minChars});
 }
 
 /// @nodoc
-class __$$_TooShortCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res, _$_TooShort>
-    implements _$$_TooShortCopyWith<$Res> {
-  __$$_TooShortCopyWithImpl(
-      _$_TooShort _value, $Res Function(_$_TooShort) _then)
+class __$$TooShortImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$TooShortImpl>
+    implements _$$TooShortImplCopyWith<$Res> {
+  __$$TooShortImplCopyWithImpl(
+      _$TooShortImpl _value, $Res Function(_$TooShortImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? minChars = null,
   }) {
-    return _then(_$_TooShort(
+    return _then(_$TooShortImpl(
       null == minChars
           ? _value.minChars
           : minChars // ignore: cast_nullable_to_non_nullable
@@ -245,8 +254,8 @@ class __$$_TooShortCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooShort extends _TooShort {
-  const _$_TooShort(this.minChars) : super._();
+class _$TooShortImpl extends _TooShort {
+  const _$TooShortImpl(this.minChars) : super._();
 
   @override
   final int minChars;
@@ -257,10 +266,10 @@ class _$_TooShort extends _TooShort {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooShort &&
+            other is _$TooShortImpl &&
             (identical(other.minChars, minChars) ||
                 other.minChars == minChars));
   }
@@ -268,11 +277,13 @@ class _$_TooShort extends _TooShort {
   @override
   int get hashCode => Object.hash(runtimeType, minChars);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TooShortCopyWith<_$_TooShort> get copyWith =>
-      __$$_TooShortCopyWithImpl<_$_TooShort>(this, _$identity);
+  _$$TooShortImplCopyWith<_$TooShortImpl> get copyWith =>
+      __$$TooShortImplCopyWithImpl<_$TooShortImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -356,37 +367,43 @@ class _$_TooShort extends _TooShort {
 }
 
 abstract class _TooShort extends TextInputFailure {
-  const factory _TooShort(final int minChars) = _$_TooShort;
+  const factory _TooShort(final int minChars) = _$TooShortImpl;
   const _TooShort._() : super._();
 
   int get minChars;
-  @JsonKey(ignore: true)
-  _$$_TooShortCopyWith<_$_TooShort> get copyWith =>
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooShortImplCopyWith<_$TooShortImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_TooLongCopyWith<$Res> {
-  factory _$$_TooLongCopyWith(
-          _$_TooLong value, $Res Function(_$_TooLong) then) =
-      __$$_TooLongCopyWithImpl<$Res>;
+abstract class _$$TooLongImplCopyWith<$Res> {
+  factory _$$TooLongImplCopyWith(
+          _$TooLongImpl value, $Res Function(_$TooLongImpl) then) =
+      __$$TooLongImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int maxChars});
 }
 
 /// @nodoc
-class __$$_TooLongCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res, _$_TooLong>
-    implements _$$_TooLongCopyWith<$Res> {
-  __$$_TooLongCopyWithImpl(_$_TooLong _value, $Res Function(_$_TooLong) _then)
+class __$$TooLongImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$TooLongImpl>
+    implements _$$TooLongImplCopyWith<$Res> {
+  __$$TooLongImplCopyWithImpl(
+      _$TooLongImpl _value, $Res Function(_$TooLongImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? maxChars = null,
   }) {
-    return _then(_$_TooLong(
+    return _then(_$TooLongImpl(
       null == maxChars
           ? _value.maxChars
           : maxChars // ignore: cast_nullable_to_non_nullable
@@ -397,8 +414,8 @@ class __$$_TooLongCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooLong extends _TooLong {
-  const _$_TooLong(this.maxChars) : super._();
+class _$TooLongImpl extends _TooLong {
+  const _$TooLongImpl(this.maxChars) : super._();
 
   @override
   final int maxChars;
@@ -409,10 +426,10 @@ class _$_TooLong extends _TooLong {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooLong &&
+            other is _$TooLongImpl &&
             (identical(other.maxChars, maxChars) ||
                 other.maxChars == maxChars));
   }
@@ -420,11 +437,13 @@ class _$_TooLong extends _TooLong {
   @override
   int get hashCode => Object.hash(runtimeType, maxChars);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TooLongCopyWith<_$_TooLong> get copyWith =>
-      __$$_TooLongCopyWithImpl<_$_TooLong>(this, _$identity);
+  _$$TooLongImplCopyWith<_$TooLongImpl> get copyWith =>
+      __$$TooLongImplCopyWithImpl<_$TooLongImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -508,33 +527,41 @@ class _$_TooLong extends _TooLong {
 }
 
 abstract class _TooLong extends TextInputFailure {
-  const factory _TooLong(final int maxChars) = _$_TooLong;
+  const factory _TooLong(final int maxChars) = _$TooLongImpl;
   const _TooLong._() : super._();
 
   int get maxChars;
-  @JsonKey(ignore: true)
-  _$$_TooLongCopyWith<_$_TooLong> get copyWith =>
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooLongImplCopyWith<_$TooLongImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_EmptyCopyWith<$Res> {
-  factory _$$_EmptyCopyWith(_$_Empty value, $Res Function(_$_Empty) then) =
-      __$$_EmptyCopyWithImpl<$Res>;
+abstract class _$$EmptyImplCopyWith<$Res> {
+  factory _$$EmptyImplCopyWith(
+          _$EmptyImpl value, $Res Function(_$EmptyImpl) then) =
+      __$$EmptyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res, _$_Empty>
-    implements _$$_EmptyCopyWith<$Res> {
-  __$$_EmptyCopyWithImpl(_$_Empty _value, $Res Function(_$_Empty) _then)
+class __$$EmptyImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$EmptyImpl>
+    implements _$$EmptyImplCopyWith<$Res> {
+  __$$EmptyImplCopyWithImpl(
+      _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_Empty extends _Empty {
-  const _$_Empty() : super._();
+class _$EmptyImpl extends _Empty {
+  const _$EmptyImpl() : super._();
 
   @override
   String toString() {
@@ -542,9 +569,9 @@ class _$_Empty extends _Empty {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Empty);
+        (other.runtimeType == runtimeType && other is _$EmptyImpl);
   }
 
   @override
@@ -632,30 +659,33 @@ class _$_Empty extends _Empty {
 }
 
 abstract class _Empty extends TextInputFailure {
-  const factory _Empty() = _$_Empty;
+  const factory _Empty() = _$EmptyImpl;
   const _Empty._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_NotUniqueCopyWith<$Res> {
-  factory _$$_NotUniqueCopyWith(
-          _$_NotUnique value, $Res Function(_$_NotUnique) then) =
-      __$$_NotUniqueCopyWithImpl<$Res>;
+abstract class _$$NotUniqueImplCopyWith<$Res> {
+  factory _$$NotUniqueImplCopyWith(
+          _$NotUniqueImpl value, $Res Function(_$NotUniqueImpl) then) =
+      __$$NotUniqueImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_NotUniqueCopyWithImpl<$Res>
-    extends _$TextInputFailureCopyWithImpl<$Res, _$_NotUnique>
-    implements _$$_NotUniqueCopyWith<$Res> {
-  __$$_NotUniqueCopyWithImpl(
-      _$_NotUnique _value, $Res Function(_$_NotUnique) _then)
+class __$$NotUniqueImplCopyWithImpl<$Res>
+    extends _$TextInputFailureCopyWithImpl<$Res, _$NotUniqueImpl>
+    implements _$$NotUniqueImplCopyWith<$Res> {
+  __$$NotUniqueImplCopyWithImpl(
+      _$NotUniqueImpl _value, $Res Function(_$NotUniqueImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TextInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_NotUnique extends _NotUnique {
-  const _$_NotUnique() : super._();
+class _$NotUniqueImpl extends _NotUnique {
+  const _$NotUniqueImpl() : super._();
 
   @override
   String toString() {
@@ -663,9 +693,9 @@ class _$_NotUnique extends _NotUnique {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NotUnique);
+        (other.runtimeType == runtimeType && other is _$NotUniqueImpl);
   }
 
   @override
@@ -753,7 +783,7 @@ class _$_NotUnique extends _NotUnique {
 }
 
 abstract class _NotUnique extends TextInputFailure {
-  const factory _NotUnique() = _$_NotUnique;
+  const factory _NotUnique() = _$NotUniqueImpl;
   const _NotUnique._() : super._();
 }
 
@@ -822,28 +852,34 @@ class _$DateTimeInputFailureCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_EmptyDateCopyWith<$Res> {
-  factory _$$_EmptyDateCopyWith(
-          _$_EmptyDate value, $Res Function(_$_EmptyDate) then) =
-      __$$_EmptyDateCopyWithImpl<$Res>;
+abstract class _$$EmptyDateImplCopyWith<$Res> {
+  factory _$$EmptyDateImplCopyWith(
+          _$EmptyDateImpl value, $Res Function(_$EmptyDateImpl) then) =
+      __$$EmptyDateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyDateCopyWithImpl<$Res>
-    extends _$DateTimeInputFailureCopyWithImpl<$Res, _$_EmptyDate>
-    implements _$$_EmptyDateCopyWith<$Res> {
-  __$$_EmptyDateCopyWithImpl(
-      _$_EmptyDate _value, $Res Function(_$_EmptyDate) _then)
+class __$$EmptyDateImplCopyWithImpl<$Res>
+    extends _$DateTimeInputFailureCopyWithImpl<$Res, _$EmptyDateImpl>
+    implements _$$EmptyDateImplCopyWith<$Res> {
+  __$$EmptyDateImplCopyWithImpl(
+      _$EmptyDateImpl _value, $Res Function(_$EmptyDateImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_EmptyDate extends _EmptyDate {
-  const _$_EmptyDate() : super._();
+class _$EmptyDateImpl extends _EmptyDate {
+  const _$EmptyDateImpl() : super._();
 
   @override
   String toString() {
@@ -851,9 +887,9 @@ class _$_EmptyDate extends _EmptyDate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EmptyDate);
+        (other.runtimeType == runtimeType && other is _$EmptyDateImpl);
   }
 
   @override
@@ -929,33 +965,35 @@ class _$_EmptyDate extends _EmptyDate {
 }
 
 abstract class _EmptyDate extends DateTimeInputFailure {
-  const factory _EmptyDate() = _$_EmptyDate;
+  const factory _EmptyDate() = _$EmptyDateImpl;
   const _EmptyDate._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_BeforeMinCopyWith<$Res> {
-  factory _$$_BeforeMinCopyWith(
-          _$_BeforeMin value, $Res Function(_$_BeforeMin) then) =
-      __$$_BeforeMinCopyWithImpl<$Res>;
+abstract class _$$BeforeMinImplCopyWith<$Res> {
+  factory _$$BeforeMinImplCopyWith(
+          _$BeforeMinImpl value, $Res Function(_$BeforeMinImpl) then) =
+      __$$BeforeMinImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DateTime min});
 }
 
 /// @nodoc
-class __$$_BeforeMinCopyWithImpl<$Res>
-    extends _$DateTimeInputFailureCopyWithImpl<$Res, _$_BeforeMin>
-    implements _$$_BeforeMinCopyWith<$Res> {
-  __$$_BeforeMinCopyWithImpl(
-      _$_BeforeMin _value, $Res Function(_$_BeforeMin) _then)
+class __$$BeforeMinImplCopyWithImpl<$Res>
+    extends _$DateTimeInputFailureCopyWithImpl<$Res, _$BeforeMinImpl>
+    implements _$$BeforeMinImplCopyWith<$Res> {
+  __$$BeforeMinImplCopyWithImpl(
+      _$BeforeMinImpl _value, $Res Function(_$BeforeMinImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? min = null,
   }) {
-    return _then(_$_BeforeMin(
+    return _then(_$BeforeMinImpl(
       null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
@@ -966,8 +1004,8 @@ class __$$_BeforeMinCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_BeforeMin extends _BeforeMin {
-  const _$_BeforeMin(this.min) : super._();
+class _$BeforeMinImpl extends _BeforeMin {
+  const _$BeforeMinImpl(this.min) : super._();
 
   @override
   final DateTime min;
@@ -978,21 +1016,23 @@ class _$_BeforeMin extends _BeforeMin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BeforeMin &&
+            other is _$BeforeMinImpl &&
             (identical(other.min, min) || other.min == min));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, min);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BeforeMinCopyWith<_$_BeforeMin> get copyWith =>
-      __$$_BeforeMinCopyWithImpl<_$_BeforeMin>(this, _$identity);
+  _$$BeforeMinImplCopyWith<_$BeforeMinImpl> get copyWith =>
+      __$$BeforeMinImplCopyWithImpl<_$BeforeMinImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1064,38 +1104,43 @@ class _$_BeforeMin extends _BeforeMin {
 }
 
 abstract class _BeforeMin extends DateTimeInputFailure {
-  const factory _BeforeMin(final DateTime min) = _$_BeforeMin;
+  const factory _BeforeMin(final DateTime min) = _$BeforeMinImpl;
   const _BeforeMin._() : super._();
 
   DateTime get min;
-  @JsonKey(ignore: true)
-  _$$_BeforeMinCopyWith<_$_BeforeMin> get copyWith =>
+
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$BeforeMinImplCopyWith<_$BeforeMinImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_AfterMaxCopyWith<$Res> {
-  factory _$$_AfterMaxCopyWith(
-          _$_AfterMax value, $Res Function(_$_AfterMax) then) =
-      __$$_AfterMaxCopyWithImpl<$Res>;
+abstract class _$$AfterMaxImplCopyWith<$Res> {
+  factory _$$AfterMaxImplCopyWith(
+          _$AfterMaxImpl value, $Res Function(_$AfterMaxImpl) then) =
+      __$$AfterMaxImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DateTime max});
 }
 
 /// @nodoc
-class __$$_AfterMaxCopyWithImpl<$Res>
-    extends _$DateTimeInputFailureCopyWithImpl<$Res, _$_AfterMax>
-    implements _$$_AfterMaxCopyWith<$Res> {
-  __$$_AfterMaxCopyWithImpl(
-      _$_AfterMax _value, $Res Function(_$_AfterMax) _then)
+class __$$AfterMaxImplCopyWithImpl<$Res>
+    extends _$DateTimeInputFailureCopyWithImpl<$Res, _$AfterMaxImpl>
+    implements _$$AfterMaxImplCopyWith<$Res> {
+  __$$AfterMaxImplCopyWithImpl(
+      _$AfterMaxImpl _value, $Res Function(_$AfterMaxImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? max = null,
   }) {
-    return _then(_$_AfterMax(
+    return _then(_$AfterMaxImpl(
       null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
@@ -1106,8 +1151,8 @@ class __$$_AfterMaxCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AfterMax extends _AfterMax {
-  const _$_AfterMax(this.max) : super._();
+class _$AfterMaxImpl extends _AfterMax {
+  const _$AfterMaxImpl(this.max) : super._();
 
   @override
   final DateTime max;
@@ -1118,21 +1163,23 @@ class _$_AfterMax extends _AfterMax {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AfterMax &&
+            other is _$AfterMaxImpl &&
             (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, max);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AfterMaxCopyWith<_$_AfterMax> get copyWith =>
-      __$$_AfterMaxCopyWithImpl<_$_AfterMax>(this, _$identity);
+  _$$AfterMaxImplCopyWith<_$AfterMaxImpl> get copyWith =>
+      __$$AfterMaxImplCopyWithImpl<_$AfterMaxImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1204,12 +1251,15 @@ class _$_AfterMax extends _AfterMax {
 }
 
 abstract class _AfterMax extends DateTimeInputFailure {
-  const factory _AfterMax(final DateTime max) = _$_AfterMax;
+  const factory _AfterMax(final DateTime max) = _$AfterMaxImpl;
   const _AfterMax._() : super._();
 
   DateTime get max;
-  @JsonKey(ignore: true)
-  _$$_AfterMaxCopyWith<_$_AfterMax> get copyWith =>
+
+  /// Create a copy of DateTimeInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AfterMaxImplCopyWith<_$AfterMaxImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1277,31 +1327,36 @@ class _$IntInputFailureCopyWithImpl<$Res, $Val extends IntInputFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_TooSmallCopyWith<$Res> {
-  factory _$$_TooSmallCopyWith(
-          _$_TooSmall value, $Res Function(_$_TooSmall) then) =
-      __$$_TooSmallCopyWithImpl<$Res>;
+abstract class _$$TooSmallImplCopyWith<$Res> {
+  factory _$$TooSmallImplCopyWith(
+          _$TooSmallImpl value, $Res Function(_$TooSmallImpl) then) =
+      __$$TooSmallImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int min});
 }
 
 /// @nodoc
-class __$$_TooSmallCopyWithImpl<$Res>
-    extends _$IntInputFailureCopyWithImpl<$Res, _$_TooSmall>
-    implements _$$_TooSmallCopyWith<$Res> {
-  __$$_TooSmallCopyWithImpl(
-      _$_TooSmall _value, $Res Function(_$_TooSmall) _then)
+class __$$TooSmallImplCopyWithImpl<$Res>
+    extends _$IntInputFailureCopyWithImpl<$Res, _$TooSmallImpl>
+    implements _$$TooSmallImplCopyWith<$Res> {
+  __$$TooSmallImplCopyWithImpl(
+      _$TooSmallImpl _value, $Res Function(_$TooSmallImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? min = null,
   }) {
-    return _then(_$_TooSmall(
+    return _then(_$TooSmallImpl(
       null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
@@ -1312,8 +1367,8 @@ class __$$_TooSmallCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooSmall extends _TooSmall {
-  const _$_TooSmall(this.min) : super._();
+class _$TooSmallImpl extends _TooSmall {
+  const _$TooSmallImpl(this.min) : super._();
 
   @override
   final int min;
@@ -1324,21 +1379,23 @@ class _$_TooSmall extends _TooSmall {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooSmall &&
+            other is _$TooSmallImpl &&
             (identical(other.min, min) || other.min == min));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, min);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TooSmallCopyWith<_$_TooSmall> get copyWith =>
-      __$$_TooSmallCopyWithImpl<_$_TooSmall>(this, _$identity);
+  _$$TooSmallImplCopyWith<_$TooSmallImpl> get copyWith =>
+      __$$TooSmallImplCopyWithImpl<_$TooSmallImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1410,36 +1467,43 @@ class _$_TooSmall extends _TooSmall {
 }
 
 abstract class _TooSmall extends IntInputFailure {
-  const factory _TooSmall(final int min) = _$_TooSmall;
+  const factory _TooSmall(final int min) = _$TooSmallImpl;
   const _TooSmall._() : super._();
 
   int get min;
-  @JsonKey(ignore: true)
-  _$$_TooSmallCopyWith<_$_TooSmall> get copyWith =>
+
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooSmallImplCopyWith<_$TooSmallImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_TooBigCopyWith<$Res> {
-  factory _$$_TooBigCopyWith(_$_TooBig value, $Res Function(_$_TooBig) then) =
-      __$$_TooBigCopyWithImpl<$Res>;
+abstract class _$$TooBigImplCopyWith<$Res> {
+  factory _$$TooBigImplCopyWith(
+          _$TooBigImpl value, $Res Function(_$TooBigImpl) then) =
+      __$$TooBigImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int max});
 }
 
 /// @nodoc
-class __$$_TooBigCopyWithImpl<$Res>
-    extends _$IntInputFailureCopyWithImpl<$Res, _$_TooBig>
-    implements _$$_TooBigCopyWith<$Res> {
-  __$$_TooBigCopyWithImpl(_$_TooBig _value, $Res Function(_$_TooBig) _then)
+class __$$TooBigImplCopyWithImpl<$Res>
+    extends _$IntInputFailureCopyWithImpl<$Res, _$TooBigImpl>
+    implements _$$TooBigImplCopyWith<$Res> {
+  __$$TooBigImplCopyWithImpl(
+      _$TooBigImpl _value, $Res Function(_$TooBigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? max = null,
   }) {
-    return _then(_$_TooBig(
+    return _then(_$TooBigImpl(
       null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
@@ -1450,8 +1514,8 @@ class __$$_TooBigCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooBig extends _TooBig {
-  const _$_TooBig(this.max) : super._();
+class _$TooBigImpl extends _TooBig {
+  const _$TooBigImpl(this.max) : super._();
 
   @override
   final int max;
@@ -1462,21 +1526,23 @@ class _$_TooBig extends _TooBig {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooBig &&
+            other is _$TooBigImpl &&
             (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, max);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TooBigCopyWith<_$_TooBig> get copyWith =>
-      __$$_TooBigCopyWithImpl<_$_TooBig>(this, _$identity);
+  _$$TooBigImplCopyWith<_$TooBigImpl> get copyWith =>
+      __$$TooBigImplCopyWithImpl<_$TooBigImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1548,35 +1614,41 @@ class _$_TooBig extends _TooBig {
 }
 
 abstract class _TooBig extends IntInputFailure {
-  const factory _TooBig(final int max) = _$_TooBig;
+  const factory _TooBig(final int max) = _$TooBigImpl;
   const _TooBig._() : super._();
 
   int get max;
-  @JsonKey(ignore: true)
-  _$$_TooBigCopyWith<_$_TooBig> get copyWith =>
+
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooBigImplCopyWith<_$TooBigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_EmptyNumberCopyWith<$Res> {
-  factory _$$_EmptyNumberCopyWith(
-          _$_EmptyNumber value, $Res Function(_$_EmptyNumber) then) =
-      __$$_EmptyNumberCopyWithImpl<$Res>;
+abstract class _$$EmptyNumberImplCopyWith<$Res> {
+  factory _$$EmptyNumberImplCopyWith(
+          _$EmptyNumberImpl value, $Res Function(_$EmptyNumberImpl) then) =
+      __$$EmptyNumberImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyNumberCopyWithImpl<$Res>
-    extends _$IntInputFailureCopyWithImpl<$Res, _$_EmptyNumber>
-    implements _$$_EmptyNumberCopyWith<$Res> {
-  __$$_EmptyNumberCopyWithImpl(
-      _$_EmptyNumber _value, $Res Function(_$_EmptyNumber) _then)
+class __$$EmptyNumberImplCopyWithImpl<$Res>
+    extends _$IntInputFailureCopyWithImpl<$Res, _$EmptyNumberImpl>
+    implements _$$EmptyNumberImplCopyWith<$Res> {
+  __$$EmptyNumberImplCopyWithImpl(
+      _$EmptyNumberImpl _value, $Res Function(_$EmptyNumberImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of IntInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_EmptyNumber extends _EmptyNumber {
-  const _$_EmptyNumber() : super._();
+class _$EmptyNumberImpl extends _EmptyNumber {
+  const _$EmptyNumberImpl() : super._();
 
   @override
   String toString() {
@@ -1584,9 +1656,9 @@ class _$_EmptyNumber extends _EmptyNumber {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EmptyNumber);
+        (other.runtimeType == runtimeType && other is _$EmptyNumberImpl);
   }
 
   @override
@@ -1662,7 +1734,7 @@ class _$_EmptyNumber extends _EmptyNumber {
 }
 
 abstract class _EmptyNumber extends IntInputFailure {
-  const factory _EmptyNumber() = _$_EmptyNumber;
+  const factory _EmptyNumber() = _$EmptyNumberImpl;
   const _EmptyNumber._() : super._();
 }
 
@@ -1730,31 +1802,36 @@ class _$DoubleInputFailureCopyWithImpl<$Res, $Val extends DoubleInputFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_TooSmallDoubleCopyWith<$Res> {
-  factory _$$_TooSmallDoubleCopyWith(
-          _$_TooSmallDouble value, $Res Function(_$_TooSmallDouble) then) =
-      __$$_TooSmallDoubleCopyWithImpl<$Res>;
+abstract class _$$TooSmallDoubleImplCopyWith<$Res> {
+  factory _$$TooSmallDoubleImplCopyWith(_$TooSmallDoubleImpl value,
+          $Res Function(_$TooSmallDoubleImpl) then) =
+      __$$TooSmallDoubleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double min});
 }
 
 /// @nodoc
-class __$$_TooSmallDoubleCopyWithImpl<$Res>
-    extends _$DoubleInputFailureCopyWithImpl<$Res, _$_TooSmallDouble>
-    implements _$$_TooSmallDoubleCopyWith<$Res> {
-  __$$_TooSmallDoubleCopyWithImpl(
-      _$_TooSmallDouble _value, $Res Function(_$_TooSmallDouble) _then)
+class __$$TooSmallDoubleImplCopyWithImpl<$Res>
+    extends _$DoubleInputFailureCopyWithImpl<$Res, _$TooSmallDoubleImpl>
+    implements _$$TooSmallDoubleImplCopyWith<$Res> {
+  __$$TooSmallDoubleImplCopyWithImpl(
+      _$TooSmallDoubleImpl _value, $Res Function(_$TooSmallDoubleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? min = null,
   }) {
-    return _then(_$_TooSmallDouble(
+    return _then(_$TooSmallDoubleImpl(
       null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
@@ -1765,8 +1842,8 @@ class __$$_TooSmallDoubleCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooSmallDouble extends _TooSmallDouble {
-  const _$_TooSmallDouble(this.min) : super._();
+class _$TooSmallDoubleImpl extends _TooSmallDouble {
+  const _$TooSmallDoubleImpl(this.min) : super._();
 
   @override
   final double min;
@@ -1777,21 +1854,24 @@ class _$_TooSmallDouble extends _TooSmallDouble {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooSmallDouble &&
+            other is _$TooSmallDoubleImpl &&
             (identical(other.min, min) || other.min == min));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, min);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TooSmallDoubleCopyWith<_$_TooSmallDouble> get copyWith =>
-      __$$_TooSmallDoubleCopyWithImpl<_$_TooSmallDouble>(this, _$identity);
+  _$$TooSmallDoubleImplCopyWith<_$TooSmallDoubleImpl> get copyWith =>
+      __$$TooSmallDoubleImplCopyWithImpl<_$TooSmallDoubleImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1863,38 +1943,43 @@ class _$_TooSmallDouble extends _TooSmallDouble {
 }
 
 abstract class _TooSmallDouble extends DoubleInputFailure {
-  const factory _TooSmallDouble(final double min) = _$_TooSmallDouble;
+  const factory _TooSmallDouble(final double min) = _$TooSmallDoubleImpl;
   const _TooSmallDouble._() : super._();
 
   double get min;
-  @JsonKey(ignore: true)
-  _$$_TooSmallDoubleCopyWith<_$_TooSmallDouble> get copyWith =>
+
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooSmallDoubleImplCopyWith<_$TooSmallDoubleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_TooBigDoubleCopyWith<$Res> {
-  factory _$$_TooBigDoubleCopyWith(
-          _$_TooBigDouble value, $Res Function(_$_TooBigDouble) then) =
-      __$$_TooBigDoubleCopyWithImpl<$Res>;
+abstract class _$$TooBigDoubleImplCopyWith<$Res> {
+  factory _$$TooBigDoubleImplCopyWith(
+          _$TooBigDoubleImpl value, $Res Function(_$TooBigDoubleImpl) then) =
+      __$$TooBigDoubleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double max});
 }
 
 /// @nodoc
-class __$$_TooBigDoubleCopyWithImpl<$Res>
-    extends _$DoubleInputFailureCopyWithImpl<$Res, _$_TooBigDouble>
-    implements _$$_TooBigDoubleCopyWith<$Res> {
-  __$$_TooBigDoubleCopyWithImpl(
-      _$_TooBigDouble _value, $Res Function(_$_TooBigDouble) _then)
+class __$$TooBigDoubleImplCopyWithImpl<$Res>
+    extends _$DoubleInputFailureCopyWithImpl<$Res, _$TooBigDoubleImpl>
+    implements _$$TooBigDoubleImplCopyWith<$Res> {
+  __$$TooBigDoubleImplCopyWithImpl(
+      _$TooBigDoubleImpl _value, $Res Function(_$TooBigDoubleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? max = null,
   }) {
-    return _then(_$_TooBigDouble(
+    return _then(_$TooBigDoubleImpl(
       null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
@@ -1905,8 +1990,8 @@ class __$$_TooBigDoubleCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TooBigDouble extends _TooBigDouble {
-  const _$_TooBigDouble(this.max) : super._();
+class _$TooBigDoubleImpl extends _TooBigDouble {
+  const _$TooBigDoubleImpl(this.max) : super._();
 
   @override
   final double max;
@@ -1917,21 +2002,23 @@ class _$_TooBigDouble extends _TooBigDouble {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TooBigDouble &&
+            other is _$TooBigDoubleImpl &&
             (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, max);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TooBigDoubleCopyWith<_$_TooBigDouble> get copyWith =>
-      __$$_TooBigDoubleCopyWithImpl<_$_TooBigDouble>(this, _$identity);
+  _$$TooBigDoubleImplCopyWith<_$TooBigDoubleImpl> get copyWith =>
+      __$$TooBigDoubleImplCopyWithImpl<_$TooBigDoubleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2003,35 +2090,41 @@ class _$_TooBigDouble extends _TooBigDouble {
 }
 
 abstract class _TooBigDouble extends DoubleInputFailure {
-  const factory _TooBigDouble(final double max) = _$_TooBigDouble;
+  const factory _TooBigDouble(final double max) = _$TooBigDoubleImpl;
   const _TooBigDouble._() : super._();
 
   double get max;
-  @JsonKey(ignore: true)
-  _$$_TooBigDoubleCopyWith<_$_TooBigDouble> get copyWith =>
+
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TooBigDoubleImplCopyWith<_$TooBigDoubleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_EmptyDoubleCopyWith<$Res> {
-  factory _$$_EmptyDoubleCopyWith(
-          _$_EmptyDouble value, $Res Function(_$_EmptyDouble) then) =
-      __$$_EmptyDoubleCopyWithImpl<$Res>;
+abstract class _$$EmptyDoubleImplCopyWith<$Res> {
+  factory _$$EmptyDoubleImplCopyWith(
+          _$EmptyDoubleImpl value, $Res Function(_$EmptyDoubleImpl) then) =
+      __$$EmptyDoubleImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyDoubleCopyWithImpl<$Res>
-    extends _$DoubleInputFailureCopyWithImpl<$Res, _$_EmptyDouble>
-    implements _$$_EmptyDoubleCopyWith<$Res> {
-  __$$_EmptyDoubleCopyWithImpl(
-      _$_EmptyDouble _value, $Res Function(_$_EmptyDouble) _then)
+class __$$EmptyDoubleImplCopyWithImpl<$Res>
+    extends _$DoubleInputFailureCopyWithImpl<$Res, _$EmptyDoubleImpl>
+    implements _$$EmptyDoubleImplCopyWith<$Res> {
+  __$$EmptyDoubleImplCopyWithImpl(
+      _$EmptyDoubleImpl _value, $Res Function(_$EmptyDoubleImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DoubleInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_EmptyDouble extends _EmptyDouble {
-  const _$_EmptyDouble() : super._();
+class _$EmptyDoubleImpl extends _EmptyDouble {
+  const _$EmptyDoubleImpl() : super._();
 
   @override
   String toString() {
@@ -2039,9 +2132,9 @@ class _$_EmptyDouble extends _EmptyDouble {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EmptyDouble);
+        (other.runtimeType == runtimeType && other is _$EmptyDoubleImpl);
   }
 
   @override
@@ -2117,7 +2210,7 @@ class _$_EmptyDouble extends _EmptyDouble {
 }
 
 abstract class _EmptyDouble extends DoubleInputFailure {
-  const factory _EmptyDouble() = _$_EmptyDouble;
+  const factory _EmptyDouble() = _$EmptyDoubleImpl;
   const _EmptyDouble._() : super._();
 }
 
@@ -2173,27 +2266,34 @@ class _$BoolInputFailureCopyWithImpl<$Res, $Val extends BoolInputFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of BoolInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_IsFalseCopyWith<$Res> {
-  factory _$$_IsFalseCopyWith(
-          _$_IsFalse value, $Res Function(_$_IsFalse) then) =
-      __$$_IsFalseCopyWithImpl<$Res>;
+abstract class _$$IsFalseImplCopyWith<$Res> {
+  factory _$$IsFalseImplCopyWith(
+          _$IsFalseImpl value, $Res Function(_$IsFalseImpl) then) =
+      __$$IsFalseImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_IsFalseCopyWithImpl<$Res>
-    extends _$BoolInputFailureCopyWithImpl<$Res, _$_IsFalse>
-    implements _$$_IsFalseCopyWith<$Res> {
-  __$$_IsFalseCopyWithImpl(_$_IsFalse _value, $Res Function(_$_IsFalse) _then)
+class __$$IsFalseImplCopyWithImpl<$Res>
+    extends _$BoolInputFailureCopyWithImpl<$Res, _$IsFalseImpl>
+    implements _$$IsFalseImplCopyWith<$Res> {
+  __$$IsFalseImplCopyWithImpl(
+      _$IsFalseImpl _value, $Res Function(_$IsFalseImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of BoolInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_IsFalse extends _IsFalse {
-  const _$_IsFalse() : super._();
+class _$IsFalseImpl extends _IsFalse {
+  const _$IsFalseImpl() : super._();
 
   @override
   String toString() {
@@ -2201,9 +2301,9 @@ class _$_IsFalse extends _IsFalse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_IsFalse);
+        (other.runtimeType == runtimeType && other is _$IsFalseImpl);
   }
 
   @override
@@ -2267,7 +2367,7 @@ class _$_IsFalse extends _IsFalse {
 }
 
 abstract class _IsFalse extends BoolInputFailure {
-  const factory _IsFalse() = _$_IsFalse;
+  const factory _IsFalse() = _$IsFalseImpl;
   const _IsFalse._() : super._();
 }
 
@@ -2335,28 +2435,34 @@ class _$ImageInputFailureCopyWithImpl<$Res, $Val extends ImageInputFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ImageInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_InvalidUrlCopyWith<$Res> {
-  factory _$$_InvalidUrlCopyWith(
-          _$_InvalidUrl value, $Res Function(_$_InvalidUrl) then) =
-      __$$_InvalidUrlCopyWithImpl<$Res>;
+abstract class _$$InvalidUrlImplCopyWith<$Res> {
+  factory _$$InvalidUrlImplCopyWith(
+          _$InvalidUrlImpl value, $Res Function(_$InvalidUrlImpl) then) =
+      __$$InvalidUrlImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InvalidUrlCopyWithImpl<$Res>
-    extends _$ImageInputFailureCopyWithImpl<$Res, _$_InvalidUrl>
-    implements _$$_InvalidUrlCopyWith<$Res> {
-  __$$_InvalidUrlCopyWithImpl(
-      _$_InvalidUrl _value, $Res Function(_$_InvalidUrl) _then)
+class __$$InvalidUrlImplCopyWithImpl<$Res>
+    extends _$ImageInputFailureCopyWithImpl<$Res, _$InvalidUrlImpl>
+    implements _$$InvalidUrlImplCopyWith<$Res> {
+  __$$InvalidUrlImplCopyWithImpl(
+      _$InvalidUrlImpl _value, $Res Function(_$InvalidUrlImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ImageInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_InvalidUrl implements _InvalidUrl {
-  const _$_InvalidUrl();
+class _$InvalidUrlImpl implements _InvalidUrl {
+  const _$InvalidUrlImpl();
 
   @override
   String toString() {
@@ -2364,9 +2470,9 @@ class _$_InvalidUrl implements _InvalidUrl {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_InvalidUrl);
+        (other.runtimeType == runtimeType && other is _$InvalidUrlImpl);
   }
 
   @override
@@ -2442,29 +2548,32 @@ class _$_InvalidUrl implements _InvalidUrl {
 }
 
 abstract class _InvalidUrl implements ImageInputFailure {
-  const factory _InvalidUrl() = _$_InvalidUrl;
+  const factory _InvalidUrl() = _$InvalidUrlImpl;
 }
 
 /// @nodoc
-abstract class _$$_FileNotExistsCopyWith<$Res> {
-  factory _$$_FileNotExistsCopyWith(
-          _$_FileNotExists value, $Res Function(_$_FileNotExists) then) =
-      __$$_FileNotExistsCopyWithImpl<$Res>;
+abstract class _$$FileNotExistsImplCopyWith<$Res> {
+  factory _$$FileNotExistsImplCopyWith(
+          _$FileNotExistsImpl value, $Res Function(_$FileNotExistsImpl) then) =
+      __$$FileNotExistsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FileNotExistsCopyWithImpl<$Res>
-    extends _$ImageInputFailureCopyWithImpl<$Res, _$_FileNotExists>
-    implements _$$_FileNotExistsCopyWith<$Res> {
-  __$$_FileNotExistsCopyWithImpl(
-      _$_FileNotExists _value, $Res Function(_$_FileNotExists) _then)
+class __$$FileNotExistsImplCopyWithImpl<$Res>
+    extends _$ImageInputFailureCopyWithImpl<$Res, _$FileNotExistsImpl>
+    implements _$$FileNotExistsImplCopyWith<$Res> {
+  __$$FileNotExistsImplCopyWithImpl(
+      _$FileNotExistsImpl _value, $Res Function(_$FileNotExistsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ImageInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_FileNotExists implements _FileNotExists {
-  const _$_FileNotExists();
+class _$FileNotExistsImpl implements _FileNotExists {
+  const _$FileNotExistsImpl();
 
   @override
   String toString() {
@@ -2472,9 +2581,9 @@ class _$_FileNotExists implements _FileNotExists {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_FileNotExists);
+        (other.runtimeType == runtimeType && other is _$FileNotExistsImpl);
   }
 
   @override
@@ -2550,29 +2659,32 @@ class _$_FileNotExists implements _FileNotExists {
 }
 
 abstract class _FileNotExists implements ImageInputFailure {
-  const factory _FileNotExists() = _$_FileNotExists;
+  const factory _FileNotExists() = _$FileNotExistsImpl;
 }
 
 /// @nodoc
-abstract class _$$_EmptyImageCopyWith<$Res> {
-  factory _$$_EmptyImageCopyWith(
-          _$_EmptyImage value, $Res Function(_$_EmptyImage) then) =
-      __$$_EmptyImageCopyWithImpl<$Res>;
+abstract class _$$EmptyImageImplCopyWith<$Res> {
+  factory _$$EmptyImageImplCopyWith(
+          _$EmptyImageImpl value, $Res Function(_$EmptyImageImpl) then) =
+      __$$EmptyImageImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EmptyImageCopyWithImpl<$Res>
-    extends _$ImageInputFailureCopyWithImpl<$Res, _$_EmptyImage>
-    implements _$$_EmptyImageCopyWith<$Res> {
-  __$$_EmptyImageCopyWithImpl(
-      _$_EmptyImage _value, $Res Function(_$_EmptyImage) _then)
+class __$$EmptyImageImplCopyWithImpl<$Res>
+    extends _$ImageInputFailureCopyWithImpl<$Res, _$EmptyImageImpl>
+    implements _$$EmptyImageImplCopyWith<$Res> {
+  __$$EmptyImageImplCopyWithImpl(
+      _$EmptyImageImpl _value, $Res Function(_$EmptyImageImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ImageInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_EmptyImage implements _EmptyImage {
-  const _$_EmptyImage();
+class _$EmptyImageImpl implements _EmptyImage {
+  const _$EmptyImageImpl();
 
   @override
   String toString() {
@@ -2580,9 +2692,9 @@ class _$_EmptyImage implements _EmptyImage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EmptyImage);
+        (other.runtimeType == runtimeType && other is _$EmptyImageImpl);
   }
 
   @override
@@ -2658,7 +2770,7 @@ class _$_EmptyImage implements _EmptyImage {
 }
 
 abstract class _EmptyImage implements ImageInputFailure {
-  const factory _EmptyImage() = _$_EmptyImage;
+  const factory _EmptyImage() = _$EmptyImageImpl;
 }
 
 /// @nodoc
@@ -2714,28 +2826,34 @@ class _$DropdownInputFailureCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of DropdownInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_NotSelectedCopyWith<$Res> {
-  factory _$$_NotSelectedCopyWith(
-          _$_NotSelected value, $Res Function(_$_NotSelected) then) =
-      __$$_NotSelectedCopyWithImpl<$Res>;
+abstract class _$$NotSelectedImplCopyWith<$Res> {
+  factory _$$NotSelectedImplCopyWith(
+          _$NotSelectedImpl value, $Res Function(_$NotSelectedImpl) then) =
+      __$$NotSelectedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_NotSelectedCopyWithImpl<$Res>
-    extends _$DropdownInputFailureCopyWithImpl<$Res, _$_NotSelected>
-    implements _$$_NotSelectedCopyWith<$Res> {
-  __$$_NotSelectedCopyWithImpl(
-      _$_NotSelected _value, $Res Function(_$_NotSelected) _then)
+class __$$NotSelectedImplCopyWithImpl<$Res>
+    extends _$DropdownInputFailureCopyWithImpl<$Res, _$NotSelectedImpl>
+    implements _$$NotSelectedImplCopyWith<$Res> {
+  __$$NotSelectedImplCopyWithImpl(
+      _$NotSelectedImpl _value, $Res Function(_$NotSelectedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DropdownInputFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$_NotSelected implements _NotSelected {
-  const _$_NotSelected();
+class _$NotSelectedImpl implements _NotSelected {
+  const _$NotSelectedImpl();
 
   @override
   String toString() {
@@ -2743,9 +2861,9 @@ class _$_NotSelected implements _NotSelected {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NotSelected);
+        (other.runtimeType == runtimeType && other is _$NotSelectedImpl);
   }
 
   @override
@@ -2809,5 +2927,488 @@ class _$_NotSelected implements _NotSelected {
 }
 
 abstract class _NotSelected implements DropdownInputFailure {
-  const factory _NotSelected() = _$_NotSelected;
+  const factory _NotSelected() = _$NotSelectedImpl;
+}
+
+/// @nodoc
+mixin _$MultiselectInputFailure {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic max) maxExceeded,
+    required TResult Function(dynamic min) minNotReached,
+    required TResult Function() notSelected,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic max)? maxExceeded,
+    TResult? Function(dynamic min)? minNotReached,
+    TResult? Function()? notSelected,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic max)? maxExceeded,
+    TResult Function(dynamic min)? minNotReached,
+    TResult Function()? notSelected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_MultiSelectMaxExceeded value) maxExceeded,
+    required TResult Function(_MultiSelectMinNotReached value) minNotReached,
+    required TResult Function(_MultiSelectNotSelected value) notSelected,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult? Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult? Function(_MultiSelectNotSelected value)? notSelected,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult Function(_MultiSelectNotSelected value)? notSelected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MultiselectInputFailureCopyWith<$Res> {
+  factory $MultiselectInputFailureCopyWith(MultiselectInputFailure value,
+          $Res Function(MultiselectInputFailure) then) =
+      _$MultiselectInputFailureCopyWithImpl<$Res, MultiselectInputFailure>;
+}
+
+/// @nodoc
+class _$MultiselectInputFailureCopyWithImpl<$Res,
+        $Val extends MultiselectInputFailure>
+    implements $MultiselectInputFailureCopyWith<$Res> {
+  _$MultiselectInputFailureCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$MultiSelectMaxExceededImplCopyWith<$Res> {
+  factory _$$MultiSelectMaxExceededImplCopyWith(
+          _$MultiSelectMaxExceededImpl value,
+          $Res Function(_$MultiSelectMaxExceededImpl) then) =
+      __$$MultiSelectMaxExceededImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic max});
+}
+
+/// @nodoc
+class __$$MultiSelectMaxExceededImplCopyWithImpl<$Res>
+    extends _$MultiselectInputFailureCopyWithImpl<$Res,
+        _$MultiSelectMaxExceededImpl>
+    implements _$$MultiSelectMaxExceededImplCopyWith<$Res> {
+  __$$MultiSelectMaxExceededImplCopyWithImpl(
+      _$MultiSelectMaxExceededImpl _value,
+      $Res Function(_$MultiSelectMaxExceededImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? max = freezed,
+  }) {
+    return _then(_$MultiSelectMaxExceededImpl(
+      freezed == max ? _value.max! : max,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$MultiSelectMaxExceededImpl implements _MultiSelectMaxExceeded {
+  const _$MultiSelectMaxExceededImpl(this.max);
+
+  @override
+  final dynamic max;
+
+  @override
+  String toString() {
+    return 'MultiselectInputFailure.maxExceeded(max: $max)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MultiSelectMaxExceededImpl &&
+            const DeepCollectionEquality().equals(other.max, max));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(max));
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MultiSelectMaxExceededImplCopyWith<_$MultiSelectMaxExceededImpl>
+      get copyWith => __$$MultiSelectMaxExceededImplCopyWithImpl<
+          _$MultiSelectMaxExceededImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic max) maxExceeded,
+    required TResult Function(dynamic min) minNotReached,
+    required TResult Function() notSelected,
+  }) {
+    return maxExceeded(max);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic max)? maxExceeded,
+    TResult? Function(dynamic min)? minNotReached,
+    TResult? Function()? notSelected,
+  }) {
+    return maxExceeded?.call(max);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic max)? maxExceeded,
+    TResult Function(dynamic min)? minNotReached,
+    TResult Function()? notSelected,
+    required TResult orElse(),
+  }) {
+    if (maxExceeded != null) {
+      return maxExceeded(max);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_MultiSelectMaxExceeded value) maxExceeded,
+    required TResult Function(_MultiSelectMinNotReached value) minNotReached,
+    required TResult Function(_MultiSelectNotSelected value) notSelected,
+  }) {
+    return maxExceeded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult? Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult? Function(_MultiSelectNotSelected value)? notSelected,
+  }) {
+    return maxExceeded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult Function(_MultiSelectNotSelected value)? notSelected,
+    required TResult orElse(),
+  }) {
+    if (maxExceeded != null) {
+      return maxExceeded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _MultiSelectMaxExceeded implements MultiselectInputFailure {
+  const factory _MultiSelectMaxExceeded(final dynamic max) =
+      _$MultiSelectMaxExceededImpl;
+
+  dynamic get max;
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MultiSelectMaxExceededImplCopyWith<_$MultiSelectMaxExceededImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$MultiSelectMinNotReachedImplCopyWith<$Res> {
+  factory _$$MultiSelectMinNotReachedImplCopyWith(
+          _$MultiSelectMinNotReachedImpl value,
+          $Res Function(_$MultiSelectMinNotReachedImpl) then) =
+      __$$MultiSelectMinNotReachedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic min});
+}
+
+/// @nodoc
+class __$$MultiSelectMinNotReachedImplCopyWithImpl<$Res>
+    extends _$MultiselectInputFailureCopyWithImpl<$Res,
+        _$MultiSelectMinNotReachedImpl>
+    implements _$$MultiSelectMinNotReachedImplCopyWith<$Res> {
+  __$$MultiSelectMinNotReachedImplCopyWithImpl(
+      _$MultiSelectMinNotReachedImpl _value,
+      $Res Function(_$MultiSelectMinNotReachedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? min = freezed,
+  }) {
+    return _then(_$MultiSelectMinNotReachedImpl(
+      freezed == min ? _value.min! : min,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$MultiSelectMinNotReachedImpl implements _MultiSelectMinNotReached {
+  const _$MultiSelectMinNotReachedImpl(this.min);
+
+  @override
+  final dynamic min;
+
+  @override
+  String toString() {
+    return 'MultiselectInputFailure.minNotReached(min: $min)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MultiSelectMinNotReachedImpl &&
+            const DeepCollectionEquality().equals(other.min, min));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(min));
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MultiSelectMinNotReachedImplCopyWith<_$MultiSelectMinNotReachedImpl>
+      get copyWith => __$$MultiSelectMinNotReachedImplCopyWithImpl<
+          _$MultiSelectMinNotReachedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic max) maxExceeded,
+    required TResult Function(dynamic min) minNotReached,
+    required TResult Function() notSelected,
+  }) {
+    return minNotReached(min);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic max)? maxExceeded,
+    TResult? Function(dynamic min)? minNotReached,
+    TResult? Function()? notSelected,
+  }) {
+    return minNotReached?.call(min);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic max)? maxExceeded,
+    TResult Function(dynamic min)? minNotReached,
+    TResult Function()? notSelected,
+    required TResult orElse(),
+  }) {
+    if (minNotReached != null) {
+      return minNotReached(min);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_MultiSelectMaxExceeded value) maxExceeded,
+    required TResult Function(_MultiSelectMinNotReached value) minNotReached,
+    required TResult Function(_MultiSelectNotSelected value) notSelected,
+  }) {
+    return minNotReached(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult? Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult? Function(_MultiSelectNotSelected value)? notSelected,
+  }) {
+    return minNotReached?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult Function(_MultiSelectNotSelected value)? notSelected,
+    required TResult orElse(),
+  }) {
+    if (minNotReached != null) {
+      return minNotReached(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _MultiSelectMinNotReached implements MultiselectInputFailure {
+  const factory _MultiSelectMinNotReached(final dynamic min) =
+      _$MultiSelectMinNotReachedImpl;
+
+  dynamic get min;
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MultiSelectMinNotReachedImplCopyWith<_$MultiSelectMinNotReachedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$MultiSelectNotSelectedImplCopyWith<$Res> {
+  factory _$$MultiSelectNotSelectedImplCopyWith(
+          _$MultiSelectNotSelectedImpl value,
+          $Res Function(_$MultiSelectNotSelectedImpl) then) =
+      __$$MultiSelectNotSelectedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$MultiSelectNotSelectedImplCopyWithImpl<$Res>
+    extends _$MultiselectInputFailureCopyWithImpl<$Res,
+        _$MultiSelectNotSelectedImpl>
+    implements _$$MultiSelectNotSelectedImplCopyWith<$Res> {
+  __$$MultiSelectNotSelectedImplCopyWithImpl(
+      _$MultiSelectNotSelectedImpl _value,
+      $Res Function(_$MultiSelectNotSelectedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MultiselectInputFailure
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$MultiSelectNotSelectedImpl implements _MultiSelectNotSelected {
+  const _$MultiSelectNotSelectedImpl();
+
+  @override
+  String toString() {
+    return 'MultiselectInputFailure.notSelected()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MultiSelectNotSelectedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic max) maxExceeded,
+    required TResult Function(dynamic min) minNotReached,
+    required TResult Function() notSelected,
+  }) {
+    return notSelected();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic max)? maxExceeded,
+    TResult? Function(dynamic min)? minNotReached,
+    TResult? Function()? notSelected,
+  }) {
+    return notSelected?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic max)? maxExceeded,
+    TResult Function(dynamic min)? minNotReached,
+    TResult Function()? notSelected,
+    required TResult orElse(),
+  }) {
+    if (notSelected != null) {
+      return notSelected();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_MultiSelectMaxExceeded value) maxExceeded,
+    required TResult Function(_MultiSelectMinNotReached value) minNotReached,
+    required TResult Function(_MultiSelectNotSelected value) notSelected,
+  }) {
+    return notSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult? Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult? Function(_MultiSelectNotSelected value)? notSelected,
+  }) {
+    return notSelected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_MultiSelectMaxExceeded value)? maxExceeded,
+    TResult Function(_MultiSelectMinNotReached value)? minNotReached,
+    TResult Function(_MultiSelectNotSelected value)? notSelected,
+    required TResult orElse(),
+  }) {
+    if (notSelected != null) {
+      return notSelected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _MultiSelectNotSelected implements MultiselectInputFailure {
+  const factory _MultiSelectNotSelected() = _$MultiSelectNotSelectedImpl;
 }

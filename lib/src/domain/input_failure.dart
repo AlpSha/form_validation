@@ -53,3 +53,10 @@ class ImageInputFailure with _$ImageInputFailure {
 class DropdownInputFailure with _$DropdownInputFailure {
   const factory DropdownInputFailure.notSelected() = _NotSelected;
 }
+
+@freezed
+class MultiselectInputFailure with _$MultiselectInputFailure {
+  const factory MultiselectInputFailure.maxExceeded(max) = _MultiSelectMaxExceeded;
+  const factory MultiselectInputFailure.minNotReached(min) = _MultiSelectMinNotReached;
+  const factory MultiselectInputFailure.notSelected() = _MultiSelectNotSelected;
+}

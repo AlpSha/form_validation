@@ -12,7 +12,7 @@ part of 'image_type.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ImageType {
@@ -71,28 +71,35 @@ class _$ImageTypeCopyWithImpl<$Res, $Val extends ImageType>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ImageType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_FileCopyWith<$Res> {
-  factory _$$_FileCopyWith(_$_File value, $Res Function(_$_File) then) =
-      __$$_FileCopyWithImpl<$Res>;
+abstract class _$$FileImplCopyWith<$Res> {
+  factory _$$FileImplCopyWith(
+          _$FileImpl value, $Res Function(_$FileImpl) then) =
+      __$$FileImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String path});
 }
 
 /// @nodoc
-class __$$_FileCopyWithImpl<$Res> extends _$ImageTypeCopyWithImpl<$Res, _$_File>
-    implements _$$_FileCopyWith<$Res> {
-  __$$_FileCopyWithImpl(_$_File _value, $Res Function(_$_File) _then)
+class __$$FileImplCopyWithImpl<$Res>
+    extends _$ImageTypeCopyWithImpl<$Res, _$FileImpl>
+    implements _$$FileImplCopyWith<$Res> {
+  __$$FileImplCopyWithImpl(_$FileImpl _value, $Res Function(_$FileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ImageType
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = null,
   }) {
-    return _then(_$_File(
+    return _then(_$FileImpl(
       null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -103,8 +110,8 @@ class __$$_FileCopyWithImpl<$Res> extends _$ImageTypeCopyWithImpl<$Res, _$_File>
 
 /// @nodoc
 
-class _$_File implements _File {
-  const _$_File(this.path);
+class _$FileImpl implements _File {
+  const _$FileImpl(this.path);
 
   @override
   final String path;
@@ -115,21 +122,23 @@ class _$_File implements _File {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_File &&
+            other is _$FileImpl &&
             (identical(other.path, path) || other.path == path));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, path);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ImageType
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FileCopyWith<_$_File> get copyWith =>
-      __$$_FileCopyWithImpl<_$_File>(this, _$identity);
+  _$$FileImplCopyWith<_$FileImpl> get copyWith =>
+      __$$FileImplCopyWithImpl<_$FileImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -195,33 +204,40 @@ class _$_File implements _File {
 }
 
 abstract class _File implements ImageType {
-  const factory _File(final String path) = _$_File;
+  const factory _File(final String path) = _$FileImpl;
 
   String get path;
-  @JsonKey(ignore: true)
-  _$$_FileCopyWith<_$_File> get copyWith => throw _privateConstructorUsedError;
+
+  /// Create a copy of ImageType
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FileImplCopyWith<_$FileImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UrlCopyWith<$Res> {
-  factory _$$_UrlCopyWith(_$_Url value, $Res Function(_$_Url) then) =
-      __$$_UrlCopyWithImpl<$Res>;
+abstract class _$$UrlImplCopyWith<$Res> {
+  factory _$$UrlImplCopyWith(_$UrlImpl value, $Res Function(_$UrlImpl) then) =
+      __$$UrlImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String url});
 }
 
 /// @nodoc
-class __$$_UrlCopyWithImpl<$Res> extends _$ImageTypeCopyWithImpl<$Res, _$_Url>
-    implements _$$_UrlCopyWith<$Res> {
-  __$$_UrlCopyWithImpl(_$_Url _value, $Res Function(_$_Url) _then)
+class __$$UrlImplCopyWithImpl<$Res>
+    extends _$ImageTypeCopyWithImpl<$Res, _$UrlImpl>
+    implements _$$UrlImplCopyWith<$Res> {
+  __$$UrlImplCopyWithImpl(_$UrlImpl _value, $Res Function(_$UrlImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ImageType
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? url = null,
   }) {
-    return _then(_$_Url(
+    return _then(_$UrlImpl(
       null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -232,8 +248,8 @@ class __$$_UrlCopyWithImpl<$Res> extends _$ImageTypeCopyWithImpl<$Res, _$_Url>
 
 /// @nodoc
 
-class _$_Url implements _Url {
-  const _$_Url(this.url);
+class _$UrlImpl implements _Url {
+  const _$UrlImpl(this.url);
 
   @override
   final String url;
@@ -244,21 +260,23 @@ class _$_Url implements _Url {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Url &&
+            other is _$UrlImpl &&
             (identical(other.url, url) || other.url == url));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ImageType
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UrlCopyWith<_$_Url> get copyWith =>
-      __$$_UrlCopyWithImpl<_$_Url>(this, _$identity);
+  _$$UrlImplCopyWith<_$UrlImpl> get copyWith =>
+      __$$UrlImplCopyWithImpl<_$UrlImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -324,9 +342,13 @@ class _$_Url implements _Url {
 }
 
 abstract class _Url implements ImageType {
-  const factory _Url(final String url) = _$_Url;
+  const factory _Url(final String url) = _$UrlImpl;
 
   String get url;
-  @JsonKey(ignore: true)
-  _$$_UrlCopyWith<_$_Url> get copyWith => throw _privateConstructorUsedError;
+
+  /// Create a copy of ImageType
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UrlImplCopyWith<_$UrlImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
