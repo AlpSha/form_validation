@@ -2,7 +2,7 @@ import 'package:form_handling/src/application/constants.dart';
 import 'package:form_handling/src/application/custom_validator.dart';
 import 'package:form_handling/src/domain/input_failure.dart';
 
-class TextValidator extends CustomValidator<String, TextInputFailure> {
+class TextValidator extends CustomValidator<String?, TextInputFailure> {
   final String? regex;
   final int? maxLength;
   final int? minLength;
@@ -15,8 +15,7 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
   }) : super();
 
   @override
-  ValidationResult<String, TextInputFailure> validateAndGetResult(
-      String? value) {
+  ValidationResult<String?, TextInputFailure> validateAndGetResult(String? value) {
     if (value == null || value == '') {
       if (isRequired) {
         return const ValidationResult.failure(
@@ -39,7 +38,7 @@ class TextValidator extends CustomValidator<String, TextInputFailure> {
         );
       }
     }
-    return ValidationResult.success(value ?? '');
+    return ValidationResult.success(value);
   }
 
   factory TextValidator.password() {

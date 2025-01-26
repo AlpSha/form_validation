@@ -97,10 +97,10 @@ class ImageFieldObject extends FormFieldObject<ImageType?, ImageInputFailure> {
         );
 }
 
-class StringFieldObject extends FormFieldObject<String, TextInputFailure> {
+class StringFieldObject extends FormFieldObject<String?, TextInputFailure> {
   StringFieldObject.generate({
     required TextValidator validator,
-    required String value,
+    required String? value,
   }) : super.generate(
           validator: validator,
           value: value,
