@@ -109,7 +109,7 @@ class StringFieldObject extends FormFieldObject<String, TextInputFailure> {
   String? get valueAsNullIfEmpty => value == '' ? null : value;
 }
 
-class MultiSelectFieldObject<T> extends FormFieldObject<List<T>, MultiselectInputFailure> {
+class MultiSelectFieldObject<T> extends FormFieldObject<List<T>?, MultiselectInputFailure> {
   MultiSelectFieldObject.generate({
     required List<T> value,
     required bool isRequired,
