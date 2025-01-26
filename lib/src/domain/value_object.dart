@@ -111,7 +111,7 @@ class StringFieldObject extends FormFieldObject<String?, TextInputFailure> {
 
 class MultiSelectFieldObject<T> extends FormFieldObject<List<T>?, MultiselectInputFailure> {
   MultiSelectFieldObject.generate({
-    required List<T> value,
+    required List<T>? value,
     required bool isRequired,
     int? minToSelect,
     int? maxToSelect,
